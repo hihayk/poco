@@ -88,7 +88,7 @@
         /*--c-body: var(--c-grey-1);*/
         --c-background: white;
         --c-primary: #A2BCE0;
-        --fontFamily: inter ui
+        /*--fontFamily: inter ui;*/
       }
 
       code {
@@ -98,6 +98,11 @@
         display: block;
         font-family: sf mono, menlo;
         overflow: auto;
+      }
+
+      pre {
+        margin-top: var(--space-m);
+        margin-bottom: var(--space-xl);
       }
 
       .introSection {
@@ -230,17 +235,19 @@
         </p>
 
         <div class="demoSection">
-          <div class="spaceframe-s demo-spaceframeOuter">
-            <div class="demo-spaceframeInner"></div>
-          </div>
-          <div class="spaceframe-m demo-spaceframeOuter">
-            <div class="demo-spaceframeInner"></div>
-          </div>
-          <div class="spaceframe-l demo-spaceframeOuter">
-            <div class="demo-spaceframeInner"></div>
-          </div>
-          <div class="spaceframe-xl demo-spaceframeOuter">
-            <div class="demo-spaceframeInner"></div>
+          <div class="distribute distribute--orientation-horizontal distribute--gap-s distribute--alignment-start">
+            <div class="spaceframe-s demo-spaceframeOuter">
+              <div class="demo-spaceframeInner"></div>
+            </div>
+            <div class="spaceframe-m demo-spaceframeOuter">
+              <div class="demo-spaceframeInner"></div>
+            </div>
+            <div class="spaceframe-l demo-spaceframeOuter">
+              <div class="demo-spaceframeInner"></div>
+            </div>
+            <div class="spaceframe-xl demo-spaceframeOuter">
+              <div class="demo-spaceframeInner"></div>
+            </div>
           </div>
         </div>
     
@@ -259,62 +266,34 @@
 
         <div class="demoSection">
         
-          <div class="demo-spacerWrapper">
-            <div class="demo-spacer spacerTop-s"></div>
-          </div>
-          <div class="demo-spacerWrapper">
-            <div class="demo-spacer spacerTop-m"></div>
-          </div>
-          <div class="demo-spacerWrapper">
-            <div class="demo-spacer spacerTop-l"></div>
-          </div>
-          <div class="demo-spacerWrapper">
-            <div class="demo-spacer spacerTop-xl"></div>
-          </div>
-
-          <br>
-          
-          <div class="demo-spacerWrapper vertical">
-            <div class="demo-spacer spacerBottom-s"></div>
-          </div>
-          <div class="demo-spacerWrapper vertical">
-            <div class="demo-spacer spacerBottom-m"></div>
-          </div>
-          <div class="demo-spacerWrapper vertical">
-            <div class="demo-spacer spacerBottom-l"></div>
-          </div>
-          <div class="demo-spacerWrapper vertical">
-            <div class="demo-spacer spacerBottom-xl"></div>
+          <div class="distribute distribute--orientation-horizontal distribute--gap-s distribute--alignment-start spacerBottom-s">
+            <div class="demo-spacerWrapper vertical">
+              <div class="demo-spacer spacerBottom-s"></div>
+            </div>
+            <div class="demo-spacerWrapper vertical">
+              <div class="demo-spacer spacerBottom-m"></div>
+            </div>
+            <div class="demo-spacerWrapper vertical">
+              <div class="demo-spacer spacerBottom-l"></div>
+            </div>
+            <div class="demo-spacerWrapper vertical">
+              <div class="demo-spacer spacerBottom-xl"></div>
+            </div>
           </div>
 
-          <br>
-
-          <div class="demo-spacerWrapper">
-            <div class="demo-spacer spacerRight-s"></div>
-          </div>
-          <div class="demo-spacerWrapper">
-            <div class="demo-spacer spacerRight-m"></div>
-          </div>
-          <div class="demo-spacerWrapper">
-            <div class="demo-spacer spacerRight-l"></div>
-          </div>
-          <div class="demo-spacerWrapper">
-            <div class="demo-spacer spacerRight-xl"></div>
-          </div>
-
-          <br>
-                  
-          <div class="demo-spacerWrapper">
-            <div class="demo-spacer spacerLeft-s"></div>
-          </div>
-          <div class="demo-spacerWrapper">
-            <div class="demo-spacer spacerLeft-m"></div>
-          </div>
-          <div class="demo-spacerWrapper">
-            <div class="demo-spacer spacerLeft-l"></div>
-          </div>
-          <div class="demo-spacerWrapper">
-            <div class="demo-spacer spacerLeft-xl"></div>
+          <div class="distribute distribute--orientation-horizontal distribute--gap-s distribute--alignment-start">
+            <div class="demo-spacerWrapper">
+              <div class="demo-spacer spacerTop-s"></div>
+            </div>
+            <div class="demo-spacerWrapper">
+              <div class="demo-spacer spacerTop-m"></div>
+            </div>
+            <div class="demo-spacerWrapper">
+              <div class="demo-spacer spacerTop-l"></div>
+            </div>
+            <div class="demo-spacerWrapper">
+              <div class="demo-spacer spacerTop-xl"></div>
+            </div>
           </div>
 
         </div>
@@ -328,8 +307,39 @@
 .spacerBottom-m
 .spacerBottom-l
 .spacerBottom-xl
+</code></pre>
 
-.spacerRight-s
+          <div class="distribute distribute--orientation-horizontal distribute--gap-s distribute--alignment-start spacerBottom-s">
+            <div class="demo-spacerWrapper">
+              <div class="demo-spacer spacerRight-s"></div>
+            </div>
+            <div class="demo-spacerWrapper">
+              <div class="demo-spacer spacerRight-m"></div>
+            </div>
+            <div class="demo-spacerWrapper">
+              <div class="demo-spacer spacerRight-l"></div>
+            </div>
+            <div class="demo-spacerWrapper">
+              <div class="demo-spacer spacerRight-xl"></div>
+            </div>
+          </div>
+
+          <div class="distribute distribute--orientation-horizontal distribute--gap-s distribute--alignment-start">
+            <div class="demo-spacerWrapper">
+              <div class="demo-spacer spacerLeft-s"></div>
+            </div>
+            <div class="demo-spacerWrapper">
+              <div class="demo-spacer spacerLeft-m"></div>
+            </div>
+            <div class="demo-spacerWrapper">
+              <div class="demo-spacer spacerLeft-l"></div>
+            </div>
+            <div class="demo-spacerWrapper">
+              <div class="demo-spacer spacerLeft-xl"></div>
+            </div>
+          </div>
+
+<pre><code>.spacerRight-s
 .spacerRight-m
 .spacerRight-l
 .spacerRight-xl
@@ -339,6 +349,7 @@
 .spacerLeft-l
 .spacerLeft-xl
 </code></pre>
+
       </div>
 
     </section>
@@ -401,42 +412,40 @@
         
         <div class="demoSection">
 
-          <div class="demo-spacerWrapper">
-            <div class="distribute distribute--gap-s distribute--orientation-horizontal">            
-              <div class="demo-spacer"></div>
-              <div class="demo-spacer"></div>
-              <div class="demo-spacer"></div>
+          <div class="distribute distribute--orientation-vertical distribute--alignment-start">
+
+            <div class="demo-spacerWrapper">
+              <div class="distribute distribute--gap-s distribute--orientation-horizontal">            
+                <div class="demo-spacer"></div>
+                <div class="demo-spacer"></div>
+                <div class="demo-spacer"></div>
+              </div>
             </div>
-          </div>
 
-          <br>
-
-          <div class="demo-spacerWrapper">
-            <div class="distribute distribute--gap-m distribute--orientation-horizontal">            
-              <div class="demo-spacer"></div>
-              <div class="demo-spacer"></div>
-              <div class="demo-spacer"></div>
+            <div class="demo-spacerWrapper">
+              <div class="distribute distribute--gap-m distribute--orientation-horizontal">            
+                <div class="demo-spacer"></div>
+                <div class="demo-spacer"></div>
+                <div class="demo-spacer"></div>
+              </div>
             </div>
-          </div>
 
-          <br>
-
-          <div class="demo-spacerWrapper">
-            <div class="distribute distribute--gap-l distribute--orientation-horizontal">
-              <div class="demo-spacer"></div>
-              <div class="demo-spacer"></div>
-              <div class="demo-spacer"></div>
+            <div class="demo-spacerWrapper">
+              <div class="distribute distribute--gap-l distribute--orientation-horizontal">
+                <div class="demo-spacer"></div>
+                <div class="demo-spacer"></div>
+                <div class="demo-spacer"></div>
+              </div>
             </div>
-          </div>
 
-          <br>
-
-          <div class="demo-spacerWrapper">
-            <div class="distribute distribute--gap-xl distribute--orientation-horizontal">
-              <div class="demo-spacer"></div>
-              <div class="demo-spacer"></div>
-              <div class="demo-spacer"></div>
+            <div class="demo-spacerWrapper">
+              <div class="distribute distribute--gap-xl distribute--orientation-horizontal">
+                <div class="demo-spacer"></div>
+                <div class="demo-spacer"></div>
+                <div class="demo-spacer"></div>
+              </div>
             </div>
+
           </div>
 
         </div>
@@ -446,37 +455,41 @@
 .distribute.distribute--gap-l
 .distribute.distribute--gap-xl
 </code></pre>
+
+        <div class="distribute distribute--orientation-horizontal distribute--alignment-start">
         
-        <div class="demo-spacerWrapper">
-          <div class="distribute distribute--orientation-vertical distribute--gap-s">
-            <div class="demo-spacer"></div>
-            <div class="demo-spacer"></div>
-            <div class="demo-spacer"></div>
+          <div class="demo-spacerWrapper">
+            <div class="distribute distribute--orientation-vertical distribute--gap-s">
+              <div class="demo-spacer"></div>
+              <div class="demo-spacer"></div>
+              <div class="demo-spacer"></div>
+            </div>
           </div>
-        </div>
 
-        <div class="demo-spacerWrapper">
-          <div class="distribute distribute--orientation-vertical distribute--gap-m">
-            <div class="demo-spacer"></div>
-            <div class="demo-spacer"></div>
-            <div class="demo-spacer"></div>
+          <div class="demo-spacerWrapper">
+            <div class="distribute distribute--orientation-vertical distribute--gap-m">
+              <div class="demo-spacer"></div>
+              <div class="demo-spacer"></div>
+              <div class="demo-spacer"></div>
+            </div>
           </div>
-        </div>
 
-        <div class="demo-spacerWrapper">
-          <div class="distribute distribute--orientation-vertical distribute--gap-l">
-            <div class="demo-spacer"></div>
-            <div class="demo-spacer"></div>
-            <div class="demo-spacer"></div>
+          <div class="demo-spacerWrapper">
+            <div class="distribute distribute--orientation-vertical distribute--gap-l">
+              <div class="demo-spacer"></div>
+              <div class="demo-spacer"></div>
+              <div class="demo-spacer"></div>
+            </div>
           </div>
-        </div>
 
-        <div class="demo-spacerWrapper">
-          <div class="distribute distribute--orientation-vertical distribute--gap-xl">
-            <div class="demo-spacer"></div>
-            <div class="demo-spacer"></div>
-            <div class="demo-spacer"></div>
+          <div class="demo-spacerWrapper">
+            <div class="distribute distribute--orientation-vertical distribute--gap-xl">
+              <div class="demo-spacer"></div>
+              <div class="demo-spacer"></div>
+              <div class="demo-spacer"></div>
+            </div>
           </div>
+        
         </div>
 
 <pre><code>.distribute.distribute--orientation-vertical.distribute--gap-s
