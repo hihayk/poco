@@ -113,6 +113,10 @@ pre {
   display: block;
 }
 
+.logo-container svg path {
+  fill: var(--c-body);
+}
+
 .docsSection {
   margin-bottom: var(--space-2xl);
 }
