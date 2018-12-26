@@ -11,151 +11,22 @@
     <link rel="apple-touch-icon" href="icon.png">
 
     <link rel="stylesheet" href="poco.css">
-
-    <style>
-
-      body {
-        padding: var(--space-xl);
-      }
-
-      @media (max-width: 720px) {
-        body {
-          padding: var(--space-l);
-        }
-      }
-
-      .demo-space {
-        background-color: var(--c-primary);
-        height: var(--space-l);
-      }
-
-      .demo-spaceframeOuter {
-        background-color: var(--c-primary);
-        display: inline-block;
-      }
-
-      .demo-spaceframeInner {
-        background-color: var(--c-grey-8);
-        width: var(--space-l);
-        height: var(--space-l);
-      }
-
-      .demo-spacerWrapper {
-        background-color: var(--c-primary);
-        display: inline-block;
-      }
-
-      .demo-spacer {
-        background-color: var(--c-grey-8);
-        width: var(--space-l);
-        height: var(--space-l);
-      }
-
-      .demo-sectionTitle {
-        color: var(--c-primary);
-        font-size: var(--fontsize-l);
-        line-height: var(--lineheight-l);
-        font-weight: var(--fontWeight-700);
-        margin-top: var(--space-xl);
-        margin-bottom: var(--space-m);
-      }
-
-      .demoColors {
-        display: flex;
-      }
-
-      .demoColors > * {
-        margin-right: 8px;
-      }
-
-      .demo-colorBox {
-        width: var(--space-l);
-        height: var(--space-l);
-        border-radius: 50%;
-        display: inline-block;
-        text-align: center;
-      }
-
-      .demo-bg {
-        background-color: var(--c-primary);
-      }
-
-      .demo-border {
-        box-shadow: inset 0 0 0 1px var(--c-primary);
-      }
-
-      :root {
-        /*--c-body: var(--c-grey-1);*/
-        --c-background: white;
-        --c-primary: #A2BCE0;
-        /*--fontFamily: inter ui;*/
-      }
-
-      code {
-        background-color: var(--c-grey-1);
-        color: var(--c-grey-5);
-        padding: var(--spaceframe-l);
-        display: block;
-        font-family: sf mono, menlo;
-        overflow: auto;
-      }
-
-      pre {
-        margin-top: var(--space-m);
-        margin-bottom: var(--space-xl);
-      }
-
-      .introSection {
-        margin-bottom: var(--space-2xl);
-      }
-
-      .logo {
-        font-size: 19.5vw;
-        letter-spacing: -0.06em;
-        text-indent: -0.06em;
-        font-weight: bold;
-        line-height: 0.4em;
-        padding-bottom: 0.4em;
-      }
-
-      .docsSection {
-        margin-bottom: var(--space-2xl);
-      }
-
-      .subsectionTitle {
-        font-size: var(--fontsize-l);
-        line-height: var(--lineheight-l);
-        margin-top: var(--space-xl);
-        margin-bottom: 0;
-      }
-
-      .sectionTitle {
-        font-size: var(--fontsize-xl);
-        line-height: var(--lineheight-xl);
-        margin-bottom: 0;
-      }
-
-      .subsectionDescription {
-        margin-top: var(--space-m);
-        margin-bottom: 0;
-      }
-
-      .demoSection {
-        margin-top: var(--space-l);
-        padding-bottom: var(--space-s);
-        overflow: auto;
-      }
-
-    </style>
+    <link rel="stylesheet" href="main.css">
   </head>
 
   <body class="theme">
     
     <section class="introSection">
-      <!-- Poco explores how minimal
+      <b>
+      minimal variables system
       <br>
-      a design system can get. -->
-      <div class="logo">poco.</div>
+      built with just CSS
+      </b>
+      <!-- <div class="logo">poco.</div> -->
+
+      <div class="logo-container">
+        <svg width="623" height="204" viewBox="0 0 623 204" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M88.39.86c-21.796 0-38.53 10.968-46.687 28.687h-.844V3.25H.36v199.969h41.063v-74.531h.844c8.015 17.015 24.89 27.703 46.828 27.703 37.687 0 61.031-29.25 61.031-77.766 0-48.656-23.484-77.766-61.734-77.766zM74.61 123.343c-20.11 0-33.329-17.438-33.329-44.719 0-27 13.219-44.86 33.328-44.86 20.532 0 33.469 17.579 33.469 44.86 0 27.422-12.937 44.719-33.469 44.719z" fill="#272727"/><path d="M223.267 157.234c45.562 0 74.672-29.109 74.672-78.75 0-48.937-29.531-78.468-74.672-78.468s-74.672 29.672-74.672 78.468c0 49.5 29.109 78.75 74.672 78.75zm0-31.359c-20.25 0-33.047-17.016-33.047-47.25 0-29.953 13.078-47.25 33.047-47.25 19.969 0 32.906 17.297 32.906 47.25 0 30.234-12.797 47.25-32.906 47.25z" fill="#272727"/><path d="M438.862 59.36C437.034 25.187 411.159.015 370.378.015c-45.141 0-73.969 30.093-73.969 78.468 0 49.219 28.828 78.75 74.25 78.75 39.656 0 66.234-22.922 68.344-58.5h-38.25c-2.532 16.454-13.219 26.297-29.672 26.297-20.391 0-33.047-16.875-33.047-46.547 0-29.109 12.656-46.265 32.906-46.265 16.875 0 27.422 11.25 29.813 27.14h38.109z" fill="#272727"/><path d="M510.738 157.234c45.563 0 74.672-29.109 74.672-78.75 0-48.937-29.531-78.468-74.672-78.468-45.14 0-74.672 29.672-74.672 78.468 0 49.5 29.11 78.75 74.672 78.75zm0-31.359c-20.25 0-33.047-17.016-33.047-47.25 0-29.953 13.078-47.25 33.047-47.25 19.969 0 32.906 17.297 32.906 47.25 0 30.234-12.796 47.25-32.906 47.25zM599.864 155.688c12.516 0 22.641-10.126 22.641-22.641 0-12.656-10.125-22.641-22.641-22.641-12.656 0-22.64 9.985-22.64 22.641 0 12.515 9.984 22.641 22.64 22.641z" fill="#272727"/></svg>
+      </div>
     </section>
 
     <section class="docsSection">
@@ -165,11 +36,11 @@
         <h4 class="subsectionTitle">Type scale</h4>
 
         <div class="demoSection">
-          <div class="textSize-xs">Size XS · 12px/16px</div>
-          <div class="textSize-s">Size S · 16px/24px</div>
-          <div class="textSize-m">Size M · 25px/32px</div>
-          <div class="textSize-l">Size L · 34px/40px</div>
-          <div class="textSize-xl">Size XL · 48px/48px</div>
+          <div class="textSize-xs">Ag · 12px/16px</div>
+          <div class="textSize-s">Ag · 16px/24px</div>
+          <div class="textSize-m">Ag · 25px/32px</div>
+          <div class="textSize-l">Ag · 34px/40px</div>
+          <div class="textSize-xl">Ag · 48px/48px</div>
         </div>
 
 <pre><code>.textSize-xs
@@ -266,47 +137,49 @@
 
         <div class="demoSection">
         
-          <div class="distribute distribute--orientation-horizontal distribute--gap-s distribute--alignment-start spacerBottom-s">
-            <div class="demo-spacerWrapper vertical">
-              <div class="demo-spacer spacerBottom-s"></div>
+          <div class="distribute distribute--orientation-vertical distribute--gap-s">
+            <div class="distribute distribute--orientation-horizontal distribute--gap-s distribute--alignment-start">
+              <div class="demo-spacerWrapper vertical">
+                <div class="demo-spacer spacerBottom-s"></div>
+              </div>
+              <div class="demo-spacerWrapper vertical">
+                <div class="demo-spacer spacerBottom-m"></div>
+              </div>
+              <div class="demo-spacerWrapper vertical">
+                <div class="demo-spacer spacerBottom-l"></div>
+              </div>
+              <div class="demo-spacerWrapper vertical">
+                <div class="demo-spacer spacerBottom-xl"></div>
+              </div>
             </div>
-            <div class="demo-spacerWrapper vertical">
-              <div class="demo-spacer spacerBottom-m"></div>
-            </div>
-            <div class="demo-spacerWrapper vertical">
-              <div class="demo-spacer spacerBottom-l"></div>
-            </div>
-            <div class="demo-spacerWrapper vertical">
-              <div class="demo-spacer spacerBottom-xl"></div>
-            </div>
-          </div>
 
-          <div class="distribute distribute--orientation-horizontal distribute--gap-s distribute--alignment-start">
-            <div class="demo-spacerWrapper">
-              <div class="demo-spacer spacerTop-s"></div>
-            </div>
-            <div class="demo-spacerWrapper">
-              <div class="demo-spacer spacerTop-m"></div>
-            </div>
-            <div class="demo-spacerWrapper">
-              <div class="demo-spacer spacerTop-l"></div>
-            </div>
-            <div class="demo-spacerWrapper">
-              <div class="demo-spacer spacerTop-xl"></div>
+            <div class="distribute distribute--orientation-horizontal distribute--gap-s distribute--alignment-start">
+              <div class="demo-spacerWrapper">
+                <div class="demo-spacer spacerTop-s"></div>
+              </div>
+              <div class="demo-spacerWrapper">
+                <div class="demo-spacer spacerTop-m"></div>
+              </div>
+              <div class="demo-spacerWrapper">
+                <div class="demo-spacer spacerTop-l"></div>
+              </div>
+              <div class="demo-spacerWrapper">
+                <div class="demo-spacer spacerTop-xl"></div>
+              </div>
             </div>
           </div>
 
         </div>
     
-<pre><code>.spacerTop-s
-.spacerTop-m
-.spacerTop-l
-.spacerTop-xl
-
-.spacerBottom-s
+<pre><code>.spacerBottom-s
 .spacerBottom-m
 .spacerBottom-l
 .spacerBottom-xl
+
+.spacerTop-s
+.spacerTop-m
+.spacerTop-l
+.spacerTop-xl
 </code></pre>
 
           <div class="distribute distribute--orientation-horizontal distribute--gap-s distribute--alignment-start spacerBottom-s">
@@ -401,103 +274,6 @@
 .bg-grey-7
 .bg-grey-8
 </code></pre>
-      </div>
-
-    </section>
-
-    <section class="docsSection">
-      <h3 class="sectionTitle">Layout</h3>
-      <div class="docsSubsection">
-        <h4 class="subsectionTitle">Distribute</h4>
-        
-        <div class="demoSection">
-
-          <div class="distribute distribute--orientation-vertical distribute--alignment-start">
-
-            <div class="demo-spacerWrapper">
-              <div class="distribute distribute--gap-s distribute--orientation-horizontal">            
-                <div class="demo-spacer"></div>
-                <div class="demo-spacer"></div>
-                <div class="demo-spacer"></div>
-              </div>
-            </div>
-
-            <div class="demo-spacerWrapper">
-              <div class="distribute distribute--gap-m distribute--orientation-horizontal">            
-                <div class="demo-spacer"></div>
-                <div class="demo-spacer"></div>
-                <div class="demo-spacer"></div>
-              </div>
-            </div>
-
-            <div class="demo-spacerWrapper">
-              <div class="distribute distribute--gap-l distribute--orientation-horizontal">
-                <div class="demo-spacer"></div>
-                <div class="demo-spacer"></div>
-                <div class="demo-spacer"></div>
-              </div>
-            </div>
-
-            <div class="demo-spacerWrapper">
-              <div class="distribute distribute--gap-xl distribute--orientation-horizontal">
-                <div class="demo-spacer"></div>
-                <div class="demo-spacer"></div>
-                <div class="demo-spacer"></div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-<pre><code>.distribute.distribute--gap-s
-.distribute.distribute--gap-m
-.distribute.distribute--gap-l
-.distribute.distribute--gap-xl
-</code></pre>
-
-        <div class="distribute distribute--orientation-horizontal distribute--alignment-start">
-        
-          <div class="demo-spacerWrapper">
-            <div class="distribute distribute--orientation-vertical distribute--gap-s">
-              <div class="demo-spacer"></div>
-              <div class="demo-spacer"></div>
-              <div class="demo-spacer"></div>
-            </div>
-          </div>
-
-          <div class="demo-spacerWrapper">
-            <div class="distribute distribute--orientation-vertical distribute--gap-m">
-              <div class="demo-spacer"></div>
-              <div class="demo-spacer"></div>
-              <div class="demo-spacer"></div>
-            </div>
-          </div>
-
-          <div class="demo-spacerWrapper">
-            <div class="distribute distribute--orientation-vertical distribute--gap-l">
-              <div class="demo-spacer"></div>
-              <div class="demo-spacer"></div>
-              <div class="demo-spacer"></div>
-            </div>
-          </div>
-
-          <div class="demo-spacerWrapper">
-            <div class="distribute distribute--orientation-vertical distribute--gap-xl">
-              <div class="demo-spacer"></div>
-              <div class="demo-spacer"></div>
-              <div class="demo-spacer"></div>
-            </div>
-          </div>
-        
-        </div>
-
-<pre><code>.distribute.distribute--orientation-vertical.distribute--gap-s
-.distribute.distribute--orientation-vertical.distribute--gap-m
-.distribute.distribute--orientation-vertical.distribute--gap-l
-.distribute.distribute--orientation-vertical.distribute--gap-xl
-</code></pre>
-
       </div>
 
     </section>
