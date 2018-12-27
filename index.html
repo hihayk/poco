@@ -232,7 +232,7 @@
         <h4 class="subsectionTitle">Greyscale</h4>
         
         <div class="demoSection">
-          <div class="demoColors">
+          <div class="demoColors--gap-s">
             <div class="demo-colorBox c-grey-1"><b>Aa</b></div>
             <div class="demo-colorBox c-grey-2"><b>Aa</b></div>
             <div class="demo-colorBox c-grey-3"><b>Aa</b></div>
@@ -243,7 +243,7 @@
             <div class="demo-colorBox c-grey-8"><b>Aa</b></div>
           </div>
 
-          <div class="demoColors">
+          <div class="demoColors--gap-s">
             <div class="demo-colorBox bg-grey-1"></div>
             <div class="demo-colorBox bg-grey-2"></div>
             <div class="demo-colorBox bg-grey-3"></div>
@@ -273,6 +273,45 @@
 .bg-grey-7
 .bg-grey-8
 </code></pre>
+
+      </div>
+
+      <div class="docsSubsection">
+        <h4 class="subsectionTitle">Color shades</h4>
+        
+        <div class="demoSection">
+          <div class="demoColors">
+            <div class="demo-colorBox spacerRight-s c-primary-2xlight"><b>Aa</b></div>
+            <div class="demo-colorBox spacerRight-s c-primary-xlight"><b>Aa</b></div>
+            <div class="demo-colorBox spacerRight-l c-primary-light"><b>Aa</b></div>
+            <div class="demo-colorBox spacerRight-l c-primary"><b>Aa</b></div>
+            <div class="demo-colorBox spacerRight-s c-primary-dark"><b>Aa</b></div>
+            <div class="demo-colorBox spacerRight-s c-primary-xdark"><b>Aa</b></div>
+            <div class="demo-colorBox spacerRight-s c-primary-2xdark"><b>Aa</b></div>
+          </div>
+
+          <div class="demoColors">
+            <div class="demo-colorBox spacerRight-s bg-primary-2xlight"></div>
+            <div class="demo-colorBox spacerRight-s bg-primary-xlight"></div>
+            <div class="demo-colorBox spacerRight-l bg-primary-light"></div>
+            <div class="demo-colorBox spacerRight-l bg-primary"></div>
+            <div class="demo-colorBox spacerRight-s bg-primary-dark"></div>
+            <div class="demo-colorBox spacerRight-s bg-primary-xdark"></div>
+            <div class="demo-colorBox spacerRight-s bg-primary-2xdark"></div>
+          </div>
+        </div>
+
+<pre><code>.c-primary-2xlight
+.c-primary-xlight
+.c-primary-light
+
+.c-primary
+
+.c-primary-dark
+.c-primary-xdark
+.c-primary-2xdark
+</code></pre>
+
       </div>
 
     </section>
@@ -320,29 +359,36 @@
 --fontWeight-400: 400;
 --fontWeight-700: 700;
 
---lightnessIncrement: 1.3;
+--greyscaleLightnessIncrement: 11%;
+--initialGreyLightness: 93%;
 
---lightnessAmount-1: 92%;
---lightnessAmount-2: calc(var(--lightnessAmount-1) / var(--lightnessIncrement));
---lightnessAmount-3: calc(var(--lightnessAmount-2) / var(--lightnessIncrement));
---lightnessAmount-4: calc(var(--lightnessAmount-3) / var(--lightnessIncrement));
---lightnessAmount-5: calc(var(--lightnessAmount-4) / var(--lightnessIncrement));
---lightnessAmount-6: calc(var(--lightnessAmount-5) / var(--lightnessIncrement));
---lightnessAmount-7: calc(var(--lightnessAmount-6) / var(--lightnessIncrement));
---lightnessAmount-8: calc(var(--lightnessAmount-7) / var(--lightnessIncrement));
-
---c-grey-1: hsl(0, 0%, var(--lightnessAmount-1));
---c-grey-2: hsl(0, 0%, var(--lightnessAmount-2));
---c-grey-3: hsl(0, 0%, var(--lightnessAmount-3));
---c-grey-4: hsl(0, 0%, var(--lightnessAmount-4));
---c-grey-5: hsl(0, 0%, var(--lightnessAmount-5));
---c-grey-6: hsl(0, 0%, var(--lightnessAmount-6));
---c-grey-7: hsl(0, 0%, var(--lightnessAmount-7));
---c-grey-8: hsl(0, 0%, var(--lightnessAmount-8));
+--c-grey-1: hsl(0, 0%, var(--initialGreyLightness));
+--c-grey-2: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 1));
+--c-grey-3: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 2));
+--c-grey-4: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 3));
+--c-grey-5: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 4));
+--c-grey-6: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 5));
+--c-grey-7: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 6));
+--c-grey-8: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 7));
 
 --c-body: var(--c-grey-8);
 --c-background: var(--c-grey-1);
---c-primary: #668EC7;
+
+--c-primary-lightnessIncrement: 10%;
+
+--c-primary-hue: 215;
+--c-primary-saturation: 46%;
+--c-primary-lightness: 50%;
+
+--c-primary: hsl(var(--c-primary-hue), var(--c-primary-saturation), var(--c-primary-lightness));
+
+--c-primary-2xlight: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) + var(--c-primary-lightnessIncrement) * 3));
+--c-primary-xlight: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) + var(--c-primary-lightnessIncrement) * 2));
+--c-primary-light: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) + var(--c-primary-lightnessIncrement)));
+
+--c-primary-dark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--c-primary-lightnessIncrement)));
+--c-primary-xdark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--c-primary-lightnessIncrement) * 2));
+--c-primary-2xdark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--c-primary-lightnessIncrement) * 3));
 </code></pre>
       
       </div>

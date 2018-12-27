@@ -1,7 +1,7 @@
 :root {
   /*--c-body: var(--c-grey-1);*/
   --c-background: white;
-  --c-primary: #A2BCE0;
+  /*--c-primary: #A2BCE0;*/
   /*--fontFamily: inter ui;*/
 }
 
@@ -51,12 +51,13 @@ body {
   margin-bottom: var(--space-m);
 }
 
-.demoColors {
+.demoColors,
+.demoColors--gap-s {
   display: flex;
 }
 
-.demoColors > * {
-  margin-right: 8px;
+.demoColors--gap-s > * {
+  margin-right: var(--space-s);
 }
 
 .demo-colorBox {
