@@ -98,6 +98,7 @@ pre {
   margin-top: 0;
   margin-bottom: var(--space-l);
   font-size: var(--fontsize-s);
+  line-height: var(--lineheight-s);
 }
 
 .logo {
