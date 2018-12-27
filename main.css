@@ -1,3 +1,10 @@
+:root {
+  /*--c-body: var(--c-grey-1);*/
+  --c-background: white;
+  --c-primary: #A2BCE0;
+  /*--fontFamily: inter ui;*/
+}
+
 body {
   padding: var(--space-xl);
 }
@@ -66,13 +73,6 @@ body {
 
 .demo-border {
   box-shadow: inset 0 0 0 1px var(--c-primary);
-}
-
-:root {
-  /*--c-body: var(--c-grey-1);*/
-  --c-background: white;
-  --c-primary: #A2BCE0;
-  /*--fontFamily: inter ui;*/
 }
 
 code {
