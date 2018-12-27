@@ -94,6 +94,12 @@ pre {
   margin-bottom: var(--space-2xl);
 }
 
+.introTitle {
+  margin-top: 0;
+  margin-bottom: var(--space-l);
+  font-size: var(--fontsize-s);
+}
+
 .logo {
   font-size: 19.5vw;
   letter-spacing: -0.06em;
