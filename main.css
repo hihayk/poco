@@ -86,8 +86,41 @@ code {
 }
 
 pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.codeSection {
+  display: flex;
   margin-top: var(--space-m);
   margin-bottom: var(--space-xl);
+}
+
+@media (max-width: 720px) {
+  .codeSection {
+    flex-direction: column;
+  }
+}
+
+.codeContainer {
+  flex: 1 0;
+}
+
+@media (min-width: 720px) {
+  .codeContainer:first-child {
+    margin-right: var(--space-s);
+  }
+}
+
+@media (max-width: 720px) {
+  .codeContainer:first-child {
+    margin-bottom: var(--space-s);
+  }
+}
+
+.codeContainerTitle {
+  color: var(--c-grey-4);
+  margin-bottom: var(--space-s);
 }
 
 .introSection {
