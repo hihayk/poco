@@ -52,7 +52,7 @@
   --c-body: var(--c-grey-8);
   --c-background: var(--c-grey-1);
   
-  --c-primary-lightnessIncrement: 10%;
+  --colorLightnessIncrement: 10%;
 
   --c-primary-hue: 215;
   --c-primary-saturation: 46%;
@@ -60,13 +60,13 @@
 
   --c-primary: hsl(var(--c-primary-hue), var(--c-primary-saturation), var(--c-primary-lightness));
 
-  --c-primary-2xlight: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) + var(--c-primary-lightnessIncrement) * 3));
-  --c-primary-xlight: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) + var(--c-primary-lightnessIncrement) * 2));
-  --c-primary-light: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) + var(--c-primary-lightnessIncrement)));
+  --c-primary-2xlight: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) + var(--colorLightnessIncrement) * 3));
+  --c-primary-xlight: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) + var(--colorLightnessIncrement) * 2));
+  --c-primary-light: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) + var(--colorLightnessIncrement)));
 
-  --c-primary-dark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--c-primary-lightnessIncrement)));
-  --c-primary-xdark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--c-primary-lightnessIncrement) * 2));
-  --c-primary-2xdark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--c-primary-lightnessIncrement) * 3));
+  --c-primary-dark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--colorLightnessIncrement)));
+  --c-primary-xdark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--colorLightnessIncrement) * 2));
+  --c-primary-2xdark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--colorLightnessIncrement) * 3));
 }
 
 .textSize-xs {
