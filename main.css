@@ -44,8 +44,8 @@ body {
 
 .demo-sectionTitle {
   color: var(--c-primary);
-  font-size: var(--fontsize-l);
-  line-height: var(--lineheight-l);
+  font-size: var(--fontSize-l);
+  line-height: var(--lineHeight-l);
   font-weight: var(--fontWeight-700);
   margin-top: var(--space-xl);
   margin-bottom: var(--space-m);
@@ -131,8 +131,8 @@ pre {
 .introTitle {
   margin-top: 0;
   margin-bottom: var(--space-l);
-  font-size: var(--fontsize-s);
-  line-height: var(--lineheight-s);
+  font-size: var(--fontSize-s);
+  line-height: var(--lineHeight-s);
 }
 
 .logo {
@@ -164,15 +164,15 @@ pre {
 }
 
 .subsectionTitle {
-  font-size: var(--fontsize-l);
-  line-height: var(--lineheight-l);
+  font-size: var(--fontSize-l);
+  line-height: var(--lineHeight-l);
   margin-top: var(--space-xl);
   margin-bottom: 0;
 }
 
 .sectionTitle {
-  font-size: var(--fontsize-xl);
-  line-height: var(--lineheight-xl);
+  font-size: var(--fontSize-xl);
+  line-height: var(--lineHeight-xl);
   margin-bottom: 0;
 }
 

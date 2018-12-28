@@ -19,20 +19,20 @@
 
   --fontFamily: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-  --fontsize-xs: 12px;
-  --lineheight-xs: calc(var(--unit) * 2);
+  --fontSize-xs: 12px;
+  --lineHeight-xs: calc(var(--unit) * 2);
 
-  --fontsize-s: 16px;
-  --lineheight-s: calc(var(--unit) * 3);
+  --fontSize-s: 16px;
+  --lineHeight-s: calc(var(--unit) * 3);
 
-  --fontsize-m: 25px;
-  --lineheight-m: calc(var(--unit) * 4);
+  --fontSize-m: 25px;
+  --lineHeight-m: calc(var(--unit) * 4);
 
-  --fontsize-l: 34px;
-  --lineheight-l: calc(var(--unit) * 5);
+  --fontSize-l: 34px;
+  --lineHeight-l: calc(var(--unit) * 5);
 
-  --fontsize-xl: 48px;
-  --lineheight-xl: calc(var(--unit) * 6);
+  --fontSize-xl: 48px;
+  --lineHeight-xl: calc(var(--unit) * 6);
   
   --fontWeight-400: 400;
   --fontWeight-700: 700;
@@ -70,28 +70,28 @@
 }
 
 .textSize-xs {
-  font-size: var(--fontsize-xs);
-  line-height: var(--lineheight-xs);
+  font-size: var(--fontSize-xs);
+  line-height: var(--lineHeight-xs);
 }
 
 .textSize-s {
-  font-size: var(--fontsize-s);
-  line-height: var(--lineheight-s);
+  font-size: var(--fontSize-s);
+  line-height: var(--lineHeight-s);
 }
 
 .textSize-m {
-  font-size: var(--fontsize-m);
-  line-height: var(--lineheight-m);
+  font-size: var(--fontSize-m);
+  line-height: var(--lineHeight-m);
 }
 
 .textSize-l {
-  font-size: var(--fontsize-l);
-  line-height: var(--lineheight-l);
+  font-size: var(--fontSize-l);
+  line-height: var(--lineHeight-l);
 }
 
 .textSize-xl {
-  font-size: var(--fontsize-xl);
-  line-height: var(--lineheight-xl);
+  font-size: var(--fontSize-xl);
+  line-height: var(--lineHeight-xl);
 }
 
 .fontWeight-400 {
@@ -178,8 +178,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--fontFamily);
-  font-size: var(--fontsize-s);
-  line-height: var(--lineheight-s);
+  font-size: var(--fontSize-s);
+  line-height: var(--lineHeight-s);
   color: var(--c-body);
   background-color: var(--c-background);
   margin: unset;
