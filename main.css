@@ -252,3 +252,24 @@ pre {
     flex-direction: column;
   }
 }
+
+.theme-dark {
+  --c-background: #171717;
+  --c-body: var(--c-grey-4);
+}
+
+.theme-dark .sectionTitle {
+  color: white;
+}
+
+.theme-dark .logo-container svg path {
+  fill: white;
+}
+
+.theme-dark .subsectionTitle {
+  color: var(--c-grey-2);
+}
+
+.theme-dark code {
+  background-color: var(--c-grey-8);
+}
