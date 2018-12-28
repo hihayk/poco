@@ -104,6 +104,7 @@ pre {
 
 .codeContainer {
   flex: 1 0;
+  max-width: 100%;
 }
 
 @media (min-width: 720px) {
