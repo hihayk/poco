@@ -1,5 +1,6 @@
 :root {
   --unit: 8px;
+  --fontFamily: -apple-system, BlinkMacSystemFont, sans-serif;
 
   --spaceIncrement: 2;
 
@@ -17,8 +18,6 @@
   --spaceframe-l: var(--space-l);
   --spaceframe-xl: var(--space-xl);
 
-  --fontFamily: -apple-system, BlinkMacSystemFont, sans-serif;
-
   --fontSize-xs: 12px;
   --lineHeight-xs: calc(var(--unit) * 2);
 
@@ -33,25 +32,10 @@
 
   --fontSize-xl: 48px;
   --lineHeight-xl: calc(var(--unit) * 6);
-  
+
   --fontWeight-400: 400;
   --fontWeight-700: 700;
 
-  --greyscaleLightnessIncrement: 11%;
-  --initialGreyLightness: 93%;
-
-  --c-grey-1: hsl(0, 0%, var(--initialGreyLightness));
-  --c-grey-2: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 1));
-  --c-grey-3: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 2));
-  --c-grey-4: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 3));
-  --c-grey-5: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 4));
-  --c-grey-6: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 5));
-  --c-grey-7: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 6));
-  --c-grey-8: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 7));
-
-  --c-body: var(--c-grey-8);
-  --c-background: var(--c-grey-1);
-  
   --colorLightnessIncrement: 10%;
 
   --c-primary-hue: 215;
@@ -67,120 +51,19 @@
   --c-primary-dark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--colorLightnessIncrement)));
   --c-primary-xdark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--colorLightnessIncrement) * 2));
   --c-primary-2xdark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--colorLightnessIncrement) * 3));
-}
 
-.textSize-xs {
-  font-size: var(--fontSize-xs);
-  line-height: var(--lineHeight-xs);
-}
+  --greyscaleLightnessIncrement: 11%;
+  --initialGreyLightness: 93%;
 
-.textSize-s {
-  font-size: var(--fontSize-s);
-  line-height: var(--lineHeight-s);
-}
+  --c-grey-1: hsl(0, 0%, var(--initialGreyLightness));
+  --c-grey-2: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 1));
+  --c-grey-3: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 2));
+  --c-grey-4: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 3));
+  --c-grey-5: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 4));
+  --c-grey-6: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 5));
+  --c-grey-7: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 6));
+  --c-grey-8: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 7));
 
-.textSize-m {
-  font-size: var(--fontSize-m);
-  line-height: var(--lineHeight-m);
-}
-
-.textSize-l {
-  font-size: var(--fontSize-l);
-  line-height: var(--lineHeight-l);
-}
-
-.textSize-xl {
-  font-size: var(--fontSize-xl);
-  line-height: var(--lineHeight-xl);
-}
-
-.fontWeight-400 {
-  font-weight: var(--fontWeight-400);
-}
-
-.fontWeight-700 {
-  font-weight: var(--fontWeight-700);
-}
-
-.width-s {width: var(--space-s)}
-.width-m {width: var(--space-m)}
-.width-l {width: var(--space-l)}
-.width-xl {width: var(--space-xl)}
-.width-2xl {width: var(--space-2xl)}
-.width-3xl {width: var(--space-3xl)}
-.width-4xl {width: var(--space-4xl)}
-.width-5xl {width: var(--space-5xl)}
-
-.spaceframe-s {padding: var(--spaceframe-s)}
-.spaceframe-m {padding: var(--spaceframe-m)}
-.spaceframe-l {padding: var(--spaceframe-l)}
-.spaceframe-xl {padding: var(--spaceframe-xl)}
-
-.spacerRight-s {margin-right: var(--space-s)}
-.spacerRight-m {margin-right: var(--space-m)}
-.spacerRight-l {margin-right: var(--space-l)}
-.spacerRight-xl {margin-right: var(--space-xl)}
-
-.spacerLeft-s {margin-left: var(--space-s)}
-.spacerLeft-m {margin-left: var(--space-m)}
-.spacerLeft-l {margin-left: var(--space-l)}
-.spacerLeft-xl {margin-left: var(--space-xl)}
-
-.spacerTop-s {margin-top: var(--space-s)}
-.spacerTop-m {margin-top: var(--space-m)}
-.spacerTop-l {margin-top: var(--space-l)}
-.spacerTop-xl {margin-top: var(--space-xl)}
-
-.spacerBottom-s {margin-bottom: var(--space-s)}
-.spacerBottom-m {margin-bottom: var(--space-m)}
-.spacerBottom-l {margin-bottom: var(--space-l)}
-.spacerBottom-xl {margin-bottom: var(--space-xl)}
-
-.c-grey-1 {color: var(--c-grey-1)}
-.c-grey-2 {color: var(--c-grey-2)}
-.c-grey-3 {color: var(--c-grey-3)}
-.c-grey-4 {color: var(--c-grey-4)}
-.c-grey-5 {color: var(--c-grey-5)}
-.c-grey-6 {color: var(--c-grey-6)}
-.c-grey-7 {color: var(--c-grey-7)}
-.c-grey-8 {color: var(--c-grey-8)}
-
-.c-primary-2xlight {color: var(--c-primary-2xlight)}
-.c-primary-xlight {color: var(--c-primary-xlight)}
-.c-primary-light {color: var(--c-primary-light)}
-.c-primary {color: var(--c-primary)}
-.c-primary-dark {color: var(--c-primary-dark)}
-.c-primary-xdark {color: var(--c-primary-xdark)}
-.c-primary-2xdark {color: var(--c-primary-2xdark)}
-
-.bg-grey-1 {background-color: var(--c-grey-1)}
-.bg-grey-2 {background-color: var(--c-grey-2)}
-.bg-grey-3 {background-color: var(--c-grey-3)}
-.bg-grey-4 {background-color: var(--c-grey-4)}
-.bg-grey-5 {background-color: var(--c-grey-5)}
-.bg-grey-6 {background-color: var(--c-grey-6)}
-.bg-grey-7 {background-color: var(--c-grey-7)}
-.bg-grey-8 {background-color: var(--c-grey-8)}
-
-.bg-primary-2xlight {background-color: var(--c-primary-2xlight)}
-.bg-primary-xlight {background-color: var(--c-primary-xlight)}
-.bg-primary-light {background-color: var(--c-primary-light)}
-.bg-primary {background-color: var(--c-primary)}
-.bg-primary-dark {background-color: var(--c-primary-dark)}
-.bg-primary-xdark {background-color: var(--c-primary-xdark)}
-.bg-primary-2xdark {background-color: var(--c-primary-2xdark)}
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: var(--fontFamily);
-  font-size: var(--fontSize-s);
-  line-height: var(--lineHeight-s);
-  color: var(--c-body);
-  background-color: var(--c-background);
-  margin: unset;
+  --c-body: var(--c-grey-8);
+  --c-background: white;
 }

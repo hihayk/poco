@@ -1,11 +1,16 @@
-:root {
-  /*--c-body: var(--c-grey-1);*/
-  --c-background: white;
-  /*--c-primary: #A2BCE0;*/
-  /*--fontFamily: inter ui;*/
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--fontFamily);
+  font-size: var(--fontSize-s);
+  line-height: var(--lineHeight-s);
+  color: var(--c-body);
+  background-color: var(--c-background);
+  margin: unset;
   padding: var(--space-xl);
 }
 
