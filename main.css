@@ -20,6 +20,12 @@ body {
   }
 }
 
+a {
+  color: var(--c-primary);
+  font-weight: bold;
+  text-underline-position: under;
+}
+
 .demo-space {
   background-color: var(--c-primary);
   height: var(--space-l);

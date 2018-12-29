@@ -52,8 +52,8 @@
   --c-primary-xdark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--colorLightnessIncrement) * 2));
   --c-primary-2xdark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--colorLightnessIncrement) * 3));
 
-  --greyscaleLightnessIncrement: 11%;
   --initialGreyLightness: 93%;
+  --greyscaleLightnessIncrement: 11%;
 
   --c-grey-1: hsl(0, 0%, var(--initialGreyLightness));
   --c-grey-2: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 1));

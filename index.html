@@ -382,9 +382,9 @@
 
         <div class="codeSection codeSection--columns-1">
           <div class="codeContainer">
-            <div class="codeContainerTitle">To edit the greyscale change this variables.</div>
-<pre><code>--initialGreyLightness: 93%;
---greyscaleLightnessIncrement: 11%;
+            <div class="codeContainerTitle">To edit the greyscale change this variables</div>
+<pre><code>--initialGreyLightness: 93%
+--greyscaleLightnessIncrement: 11%
 </code></pre>
           </div>
         </div>
@@ -446,10 +446,31 @@
             </div>
           </div>
 
+          <div class="codeSection codeSection--columns-1">
+            <div class="codeContainer">
+              <div class="codeContainerTitle">To edit the primary color and its shades change this variables</div>
+<pre><code>--colorLightnessIncrement: 10%
+--c-primary-hue: 215
+--c-primary-saturation: 46%
+--c-primary-lightness: 50%
+</code></pre>
+            </div>
+          </div>
+
         </div>
-
       </div>
+    </section>
 
+    <section class="docsSection">
+      <h3 class="sectionTitle">Get Poco</h3>
+      
+      <div class="docsSubsection">
+        <p>
+          Poco is ment to be customized and adapted to each project's needs.
+          <br>
+          Copy the <a href="https://raw.githubusercontent.com/hihayk/poco/master/poco.css" target="_blank">poco.css</a> to your project. Additionally you can get the utilities corresponding to each variable from <a href="https://raw.githubusercontent.com/hihayk/poco/master/poco-utilities.css" target="_blank">poco-utilities.css</a>.
+        </p>
+      </div>
     </section>
 
     <section class="docsSection">
@@ -460,6 +481,7 @@
           <div class="codeContainer">
             <div class="codeContainerTitle">All variables</div>
 <pre><code>--unit: 8px;
+--fontFamily: -apple-system, BlinkMacSystemFont, sans-serif;
 
 --spaceIncrement: 2;
 
@@ -476,8 +498,6 @@
 --spaceframe-m: var(--space-m);
 --spaceframe-l: var(--space-l);
 --spaceframe-xl: var(--space-xl);
-
---fontFamily: -apple-system, BlinkMacSystemFont, sans-serif;
 
 --fontSize-xs: 12px;
 --lineHeight-xs: calc(var(--unit) * 2);
@@ -497,21 +517,6 @@
 --fontWeight-400: 400;
 --fontWeight-700: 700;
 
---greyscaleLightnessIncrement: 11%;
---initialGreyLightness: 93%;
-
---c-grey-1: hsl(0, 0%, var(--initialGreyLightness));
---c-grey-2: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 1));
---c-grey-3: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 2));
---c-grey-4: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 3));
---c-grey-5: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 4));
---c-grey-6: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 5));
---c-grey-7: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 6));
---c-grey-8: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 7));
-
---c-body: var(--c-grey-8);
---c-background: var(--c-grey-1);
-
 --colorLightnessIncrement: 10%;
 
 --c-primary-hue: 215;
@@ -527,6 +532,21 @@
 --c-primary-dark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--colorLightnessIncrement)));
 --c-primary-xdark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--colorLightnessIncrement) * 2));
 --c-primary-2xdark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--colorLightnessIncrement) * 3));
+
+--initialGreyLightness: 93%;
+--greyscaleLightnessIncrement: 11%;
+
+--c-grey-1: hsl(0, 0%, var(--initialGreyLightness));
+--c-grey-2: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 1));
+--c-grey-3: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 2));
+--c-grey-4: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 3));
+--c-grey-5: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 4));
+--c-grey-6: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 5));
+--c-grey-7: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 6));
+--c-grey-8: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 7));
+
+--c-body: var(--c-grey-8);
+--c-background: white;
 </code></pre>
           </div>
         </div>
