@@ -81,7 +81,7 @@ code {
   color: var(--c-grey-5);
   padding: var(--spaceframe-l);
   display: block;
-  font-family: sf mono, menlo, mono;
+  font-family: sf mono, menlo, monospace;
   overflow: auto;
 }
 
