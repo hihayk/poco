@@ -91,19 +91,23 @@ pre {
 }
 
 .codeSection {
-  display: flex;
+  display: grid;
+  grid-template-columns: 50% 50%;
   margin-top: var(--space-m);
   margin-bottom: var(--space-xl);
 }
 
+.codeSection--columns-1 {
+  grid-template-columns: 100%;
+}
+
 @media (max-width: 720px) {
   .codeSection {
-    flex-direction: column;
+    grid-template-columns: 100%;
   }
 }
 
 .codeContainer {
-  flex: 1 0;
   max-width: 100%;
 }
 
