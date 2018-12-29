@@ -97,9 +97,9 @@ pre {
 
 .codeSection {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: var(--space-s);
   margin-top: var(--space-m);
-  margin-bottom: var(--space-xl);
 }
 
 .codeSection--columns-1 {
@@ -114,18 +114,6 @@ pre {
 
 .codeContainer {
   max-width: 100%;
-}
-
-@media (min-width: 720px) {
-  .codeContainer:first-child {
-    margin-right: var(--space-s);
-  }
-}
-
-@media (max-width: 720px) {
-  .codeContainer:first-child {
-    margin-bottom: var(--space-s);
-  }
 }
 
 .codeContainerTitle {

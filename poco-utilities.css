@@ -7,23 +7,23 @@
 .width-4xl {width: var(--space-4xl)}
 .width-5xl {width: var(--space-5xl)}
 
-.min-width-s {width: var(--space-s)}
-.min-width-m {width: var(--space-m)}
-.min-width-l {width: var(--space-l)}
-.min-width-xl {width: var(--space-xl)}
-.min-width-2xl {width: var(--space-2xl)}
-.min-width-3xl {width: var(--space-3xl)}
-.min-width-4xl {width: var(--space-4xl)}
-.min-width-5xl {width: var(--space-5xl)}
+.min-width-s {min-width: var(--space-s)}
+.min-width-m {min-width: var(--space-m)}
+.min-width-l {min-width: var(--space-l)}
+.min-width-xl {min-width: var(--space-xl)}
+.min-width-2xl {min-width: var(--space-2xl)}
+.min-width-3xl {min-width: var(--space-3xl)}
+.min-width-4xl {min-width: var(--space-4xl)}
+.min-width-5xl {min-width: var(--space-5xl)}
 
-.max-width-s {width: var(--space-s)}
-.max-width-m {width: var(--space-m)}
-.max-width-l {width: var(--space-l)}
-.max-width-xl {width: var(--space-xl)}
-.max-width-2xl {width: var(--space-2xl)}
-.max-width-3xl {width: var(--space-3xl)}
-.max-width-4xl {width: var(--space-4xl)}
-.max-width-5xl {width: var(--space-5xl)}
+.max-width-s {max-width: var(--space-s)}
+.max-width-m {max-width: var(--space-m)}
+.max-width-l {max-width: var(--space-l)}
+.max-width-xl {max-width: var(--space-xl)}
+.max-width-2xl {max-width: var(--space-2xl)}
+.max-width-3xl {max-width: var(--space-3xl)}
+.max-width-4xl {max-width: var(--space-4xl)}
+.max-width-5xl {max-width: var(--space-5xl)}
 
 .height-s {height: var(--space-s)}
 .height-m {height: var(--space-m)}
@@ -34,23 +34,23 @@
 .height-4xl {height: var(--space-4xl)}
 .height-5xl {height: var(--space-5xl)}
 
-.min-height-s {height: var(--space-s)}
-.min-height-m {height: var(--space-m)}
-.min-height-l {height: var(--space-l)}
-.min-height-xl {height: var(--space-xl)}
-.min-height-2xl {height: var(--space-2xl)}
-.min-height-3xl {height: var(--space-3xl)}
-.min-height-4xl {height: var(--space-4xl)}
-.min-height-5xl {height: var(--space-5xl)}
+.min-height-s {min-height: var(--space-s)}
+.min-height-m {min-height: var(--space-m)}
+.min-height-l {min-height: var(--space-l)}
+.min-height-xl {min-height: var(--space-xl)}
+.min-height-2xl {min-height: var(--space-2xl)}
+.min-height-3xl {min-height: var(--space-3xl)}
+.min-height-4xl {min-height: var(--space-4xl)}
+.min-height-5xl {min-height: var(--space-5xl)}
 
-.max-height-s {height: var(--space-s)}
-.max-height-m {height: var(--space-m)}
-.max-height-l {height: var(--space-l)}
-.max-height-xl {height: var(--space-xl)}
-.max-height-2xl {height: var(--space-2xl)}
-.max-height-3xl {height: var(--space-3xl)}
-.max-height-4xl {height: var(--space-4xl)}
-.max-height-5xl {height: var(--space-5xl)}
+.max-height-s {max-height: var(--space-s)}
+.max-height-m {max-height: var(--space-m)}
+.max-height-l {max-height: var(--space-l)}
+.max-height-xl {max-height: var(--space-xl)}
+.max-height-2xl {max-height: var(--space-2xl)}
+.max-height-3xl {max-height: var(--space-3xl)}
+.max-height-4xl {max-height: var(--space-4xl)}
+.max-height-5xl {max-height: var(--space-5xl)}
 
 .spacerRight-s {margin-right: var(--space-s)}
 .spacerRight-m {margin-right: var(--space-m)}
