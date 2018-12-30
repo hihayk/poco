@@ -24,13 +24,13 @@
   --fontSize-s: 16px;
   --lineHeight-s: calc(var(--unit) * 3);
 
-  --fontSize-m: 25px;
+  --fontSize-m: 22px;
   --lineHeight-m: calc(var(--unit) * 4);
 
   --fontSize-l: 34px;
   --lineHeight-l: calc(var(--unit) * 5);
 
-  --fontSize-xl: 48px;
+  --fontSize-xl: 44px;
   --lineHeight-xl: calc(var(--unit) * 6);
 
   --fontWeight-400: 400;

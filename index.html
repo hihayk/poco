@@ -6,6 +6,7 @@
     <title>poco.</title>
     <meta name="description" content="minimal CSS variables structure for design systems">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="" id="themeMetaTag">
 
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
@@ -13,9 +14,11 @@
     <link rel="stylesheet" href="poco.css">
     <link rel="stylesheet" href="poco-utilities.css">
     <link rel="stylesheet" href="main.css">
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
   </head>
 
-  <body>
+  <body class="theme-dark">
     
     <section class="introSection">
       <h1 class="introTitle">
@@ -44,9 +47,9 @@
         <div class="demoSection">
           <div class="textSize-xs">Ag · 12px/16px</div>
           <div class="textSize-s">Ag · 16px/24px</div>
-          <div class="textSize-m">Ag · 25px/32px</div>
+          <div class="textSize-m">Ag · 22px/32px</div>
           <div class="textSize-l">Ag · 34px/40px</div>
-          <div class="textSize-xl">Ag · 48px/48px</div>
+          <div class="textSize-xl">Ag · 44px/48px</div>
         </div>
 
         <div class="codeSection">
@@ -557,14 +560,40 @@
     <script>
       const body = document.querySelector('body')
 
+      const setThemeMetaTagColor = (color) => {
+        document.getElementById('themeMetaTag').setAttribute('content', color)
+      }
+
+      if(body.classList[0] === 'theme-dark') {
+        setThemeMetaTagColor('#171717')
+      } else {
+        setThemeMetaTagColor('white')
+      }
+
       const toggleTheme = () => {
         if(body.classList[0] === 'theme-dark') {
           body.classList.remove('theme-dark')
+          setThemeMetaTagColor('white')
         } else {
           body.classList.add('theme-dark')
+          setThemeMetaTagColor('#171717')
         }
       }
     </script>
+
+    <footer class="distribute distribute--orientation-horizontal distribute--gap-l distribute--alignment-center c-grey-6 textSize-xs">
+      <div>
+        made by <a class="c-grey-6" target="_blank" href="https://hihayk.com">Hayk</a>
+      </div>
+
+      <div>
+        <a class="c-grey-6" target="_blank" href="https://github.com/hihayk/poco">Github</a>
+      </div>
+
+      <div class="githubButtonWrapper">
+        <a target="_blank" class="github-button" href="https://github.com/hihayk/poco" data-icon="octicon-star" data-show-count="true" aria-label="Star hihayk/poco on GitHub">Star</a>
+      </div>
+    </footer>
 
   </body>
 </html>

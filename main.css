@@ -108,6 +108,10 @@ pre {
   margin-top: var(--space-m);
 }
 
+.codeSection + .codeSection {
+  margin-top: var(--space-l);
+}
+
 .codeSection--columns-1 {
   grid-template-columns: 100%;
 }
@@ -204,7 +208,8 @@ pre {
 .distribute--gap-l.distribute--orientation-vertical > *:not(:last-child) {margin-bottom: var(--space-l)}
 .distribute--gap-xl.distribute--orientation-vertical > *:not(:last-child) {margin-bottom: var(--space-xl)}
 
-.distribute--alignment-start {align-items: flex-start;}
+.distribute--alignment-start {align-items: flex-start}
+.distribute--alignment-center {align-items: center}
 
 .layout {
   display: flex;
@@ -275,4 +280,13 @@ pre {
 
 .theme-dark code {
   background-color: var(--c-grey-8);
+}
+
+.githubButtonWrapper {
+  position: relative;
+  top: 2px;
+}
+
+.theme-dark .githubButtonWrapper {
+  filter: invert(0.9);
 }
