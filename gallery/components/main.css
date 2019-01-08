@@ -1,0 +1,242 @@
+:root {
+	--boxShadow-s: 0 4px 8px rgba(0,0,0,0.1);
+	--textboxHeight: calc(var(--unit) * 5);
+	--textboxHorizontalSpace: var(--space-m);
+	--textboxFontSize: var(--fontSize-s);
+	--textboxLineHeight: var(--lineHeight-s);
+	--textboxFontWeight: var(--fontWeight-400);
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+	background-color: var(--c-grey-1);
+	margin: 0;
+	padding: var(--space-xl);
+	font-family: var(--fontFamily);
+	font-size: var(--fontSize-s);
+	line-height: var(--lineHeight-s);
+	color: var(--c-grey-6);
+}
+
+.cardTitle {
+	font-weight: var(--fontWeight-700);
+	margin-bottom: var(--space-m);
+}
+
+.card {
+	background-color: white;
+	padding: var(--space-l);
+	box-shadow: var(--boxShadow-s);
+}
+
+button {
+	font: inherit;
+	appearance: none;
+	border: none;
+	background-color: var(--c-grey-2);
+	height: var(--textboxHeight);
+	padding: 0 var(--textboxHorizontalSpace);
+	font-size: var(--textboxFontSize);
+	line-height: var(--textboxLineHeight);
+	font-weight: var(--textboxFontWeight);
+	color: inherit;
+	cursor: pointer;
+}
+
+.textInput {
+	font: inherit;
+	appearance: none;
+	border: 1px solid var(--c-grey-3);
+	background-color: white;
+	height: var(--textboxHeight);
+	padding: 0 var(--textboxHorizontalSpace);
+	color: inherit;
+	/*font-size: var(--textboxFontSize);
+	line-height: var(--textboxLineHeight);*/
+	/*font-weight: var(--textboxFontWeight);*/
+}
+
+.button--type-primary {
+	background-color: var(--c-primary);
+	color: white;
+}
+
+.textboXSection {
+	display: flex;
+}
+
+.dialog {
+	background-color: white;
+	padding: var(--space-l);
+	box-shadow: var(--boxShadow-s);
+	max-width: var(--space-4xl);
+}
+
+.dialogTitle {
+	font-size: var(--fontSize-m);
+	line-height: var(--lineHeight-m);
+	font-weight: var(--fontWeight-700);
+	margin-bottom: var(--space-m);
+}
+
+.dialogBody + .dialogFooter {
+	margin-top: var(--space-m);
+}
+
+.dialogFooterButtons {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.dialogFooterButtons button + button {
+	margin-left: var(--space-s);
+}
+
+.table {
+	display: table;
+	width: 100%;
+}
+
+.tableRow {
+	display: table-row;
+}
+
+.tableHeadCell {
+	display: table-cell;
+	height: var(--space-l);
+	border-bottom: 1px solid rgba(0,0,0,0.15);
+	font-weight: var(--fontWeight-700);
+	font-size: var(--fontSize-xs);
+	line-height: var(--lineHeight-xs);
+}
+
+.tableCell {
+	display: table-cell;
+	height: var(--space-xl);
+	vertical-align: middle;
+	border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.tableHeadCell--width-xs {width: var(--space-xs)}
+.tableHeadCell--width-s {width: var(--space-s)}
+.tableHeadCell--width-m {width: var(--space-m)}
+.tableHeadCell--width-l {width: var(--space-l)}
+.tableHeadCell--width-xl {width: var(--space-xl)}
+.tableHeadCell--width-2xl {width: var(--spa2e-2xl)}
+.tableHeadCell--width-3xl {width: var(--space-3xl)}
+.tableHeadCell--width-4xl {width: var(--space-4xl)}
+.tableHeadCell--width-5xl {width: var(--space-5xl)}
+
+.switchKnob {
+	--offset: 2px;
+
+	width: calc(var(--space-m) - var(--offset) * 2);
+	height: calc(var(--space-m) - var(--offset) * 2);
+	background-color: white;
+	display: block;
+	position: relative;
+	top: var(--offset);
+	left: var(--offset);
+	border-radius: 50%;
+	transition: transform 0.1s;
+	z-index: 1;
+}
+
+.switchLabel {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	width: var(--space-l);
+	height: var(--space-m);
+}
+
+.switchTrack {
+	background-color: var(--c-grey-3);
+	width: var(--space-l);
+	height: var(--space-m);
+	display: block;
+	border-radius: 200px;
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	transition: background-color 0.3s;
+}
+
+.switchInput:checked ~ .switchTrack {
+	background-color: var(--c-primary);
+}
+
+.switchInput {
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	cursor: pointer;
+}
+
+.switchInput:checked ~ .switchKnob {
+	transform: translateX(var(--space-m));
+}
+
+.layout {
+  display: flex;
+}
+
+.layout--gap-s .layoutItem:not(:last-child) {margin-right: var(--space-s)}
+.layout--gap-m .layoutItem:not(:last-child) {margin-right: var(--space-m)}
+.layout--gap-l .layoutItem:not(:last-child) {margin-right: var(--space-l)}
+.layout--gap-xl .layoutItem:not(:last-child) {margin-right: var(--space-xl)}
+
+.layout--align-center {
+  justify-content: center;
+}
+
+.layoutItem--width-remaining {
+  flex: 1 0;
+}
+
+.layoutItem--width-s {width: var(--space-s)}
+.layoutItem--width-m {width: var(--space-m)}
+.layoutItem--width-l {width: var(--space-l)}
+.layoutItem--width-xl {width: var(--space-xl)}
+.layoutItem--width-2xl {width: var(--space-2xl)}
+.layoutItem--width-3xl {width: var(--space-3xl)}
+.layoutItem--width-4xl {width: var(--space-4xl)}
+.layoutItem--width-5xl {width: var(--space-5xl)}
+
+.layout--maxWidth-s {max-width: var(--space-s)}
+.layout--maxWidth-m {max-width: var(--space-m)}
+.layout--maxWidth-l {max-width: var(--space-l)}
+.layout--maxWidth-xl {max-width: var(--space-xl)}
+.layout--maxWidth-2xl {max-width: var(--space-2xl)}
+.layout--maxWidth-3xl {max-width: var(--space-3xl)}
+.layout--maxWidth-4xl {max-width: var(--space-4xl)}
+.layout--maxWidth-5xl {max-width: var(--space-5xl)}
+
+.distribute {
+  display: flex;
+}
+
+.distribute--gap-s.distribute--orientation-horizontal > *:not(:last-child) {margin-right: var(--space-s)}
+.distribute--gap-m.distribute--orientation-horizontal > *:not(:last-child) {margin-right: var(--space-m)}
+.distribute--gap-l.distribute--orientation-horizontal > *:not(:last-child) {margin-right: var(--space-l)}
+.distribute--gap-xl.distribute--orientation-horizontal > *:not(:last-child) {margin-right: var(--space-xl)}
+
+.distribute--gap-s.distribute--orientation-vertical > *:not(:last-child) {margin-bottom: var(--space-s)}
+.distribute--gap-m.distribute--orientation-vertical > *:not(:last-child) {margin-bottom: var(--space-m)}
+.distribute--gap-l.distribute--orientation-vertical > *:not(:last-child) {margin-bottom: var(--space-l)}
+.distribute--gap-xl.distribute--orientation-vertical > *:not(:last-child) {margin-bottom: var(--space-xl)}
+
+.distribute--alignment-start {align-items: flex-start}
+.distribute--alignment-center {align-items: center}
+.distribute--alignment-end {align-items: flex-end}
+
+
+.distribute--orientation-vertical {
+  flex-direction: column;
+}
