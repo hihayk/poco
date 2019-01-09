@@ -178,3 +178,11 @@ img {
 	line-height: var(--lineHeight-xl);
 	font-family: 'Merriweather', serif;
 }
+
+.featureTitle {
+	margin-bottom: var(--space-s);
+	color: var(--c-primary);
+	font-size: var(--fontSize-m);
+	line-height: var(--lineHeight-m);
+	font-family: 'Merriweather', serif;
+}
