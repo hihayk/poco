@@ -1,3 +1,9 @@
+:root {
+	--c-primary-hue: 7;
+  --c-primary-saturation: 65%;
+  --c-primary-lightness: 50%;
+}
+
 body {
 	background-color: var(--c-grey-1);
 	margin: 0;
@@ -31,7 +37,7 @@ img {
 	font-weight: var(--fontWeight-700);
 	margin-bottom: var(--space-m);
 	letter-spacing: -0.03em;
-	color: #d64e3c;
+	color: var(--c-primary);
 }
 
 .articleSubtitle {
@@ -39,6 +45,14 @@ img {
 	line-height: var(--lineHeight-l);
 	font-weight: var(--fontWeight-700);
 	margin-bottom: var(--space-m);
+	letter-spacing: -0.02em;
+	color: var(--c-grey-8);
+}
+
+.sectionTitle {
+	font-size: var(--fontSize-m);
+	line-height: var(--lineHeight-m);
+	font-weight: var(--fontWeight-700);
 	letter-spacing: -0.02em;
 	color: var(--c-grey-8);
 }

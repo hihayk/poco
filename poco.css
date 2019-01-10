@@ -27,7 +27,7 @@
   --fontSize-m: 22px;
   --lineHeight-m: calc(var(--unit) * 4);
 
-  --fontSize-l: 34px;
+  --fontSize-l: 36px;
   --lineHeight-l: calc(var(--unit) * 5);
 
   --fontSize-xl: 44px;
@@ -52,18 +52,18 @@
   --c-primary-xdark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--colorLightnessIncrement) * 2));
   --c-primary-2xdark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--colorLightnessIncrement) * 3));
 
+  --greyHue: 0;
+  --greySaturation: 0%;
+
   --initialGreyLightness: 93%;
   --greyscaleLightnessIncrement: 11%;
 
-  --c-grey-1: hsl(0, 0%, var(--initialGreyLightness));
-  --c-grey-2: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 1));
-  --c-grey-3: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 2));
-  --c-grey-4: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 3));
-  --c-grey-5: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 4));
-  --c-grey-6: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 5));
-  --c-grey-7: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 6));
-  --c-grey-8: hsl(0, 0%, calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 7));
-
-  --c-body: var(--c-grey-8);
-  --c-background: white;
+  --c-grey-1: hsl(var(--greyHue), var(--greySaturation), var(--initialGreyLightness));
+  --c-grey-2: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 1));
+  --c-grey-3: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 2));
+  --c-grey-4: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 3));
+  --c-grey-5: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 4));
+  --c-grey-6: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 5));
+  --c-grey-7: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 6));
+  --c-grey-8: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 7));
 }

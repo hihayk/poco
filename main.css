@@ -1,3 +1,17 @@
+:root {
+  --greyHue: 215;
+  --greySaturation: 10%;
+
+  --c-body: var(--c-grey-8);
+  --c-background: white;
+
+  --greyscaleLightnessIncrement: 10.2%;
+  --c-grey-9: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 8));
+  
+  --darkThemeBackground: var(--c-grey-9);
+  --darkThemeBodyColor: var(--c-grey-4);
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -8,10 +22,10 @@ body {
   font-family: var(--fontFamily);
   font-size: var(--fontSize-s);
   line-height: var(--lineHeight-s);
-  color: var(--c-body);
-  background-color: var(--c-background);
   margin: unset;
   padding: var(--space-xl);
+  background-color: var(--c-background);
+  color: var(--c-body);
 }
 
 @media (max-width: 720px) {
@@ -228,8 +242,8 @@ pre {
 }
 
 .theme-dark {
-  --c-background: #171717;
-  --c-body: var(--c-grey-4);
+  --c-background: var(--darkThemeBackground);
+  --c-body: var(--darkThemeBodyColor);
 }
 
 .theme-dark .sectionTitle {
