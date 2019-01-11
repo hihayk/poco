@@ -1,8 +1,7 @@
 :root {
-	--c-primary-hue: 220;
-	--c-primary-saturation: 30%;
-	
-	--greyHue: 220;
+	--c-primary-hue: 360;
+  --c-primary-saturation: 26%;
+  --greyHue: 228;
   --greySaturation: 10%;
 
 	--colorLightnessIncrement: 14%;
