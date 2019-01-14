@@ -1,27 +1,73 @@
 :root {
+	--initialGreyLightness: 68%;
+	--greyscaleLightnessIncrement: 8%;
+
+	--c-primary-hue: 38;
+  --c-primary-saturation: 85%;
+  --c-primary-lightness: 54%;
+
+  --colorLightnessIncrement: 12%;
+
+  --fontFamily: IBM plex sans;
+}
+
+:root {
 	--boxShadow-s: 0 4px 8px rgba(0,0,0,0.1);
+	
 	--textboxHeight: calc(var(--unit) * 5);
 	--textboxHorizontalSpace: var(--space-m);
 	--textboxFontSize: var(--fontSize-s);
 	--textboxLineHeight: var(--lineHeight-s);
 	--textboxFontWeight: var(--fontWeight-400);
+
+	--textboxBorderRadius: 3px;
+
+	--titleColor: var(--c-grey-1);
+	--overlayLayerBgColor: var(--c-grey-7);
+
+	--disabledOpacity: 0.5;
+
+	--switchOffset: 4px;
+	--switchWidth: calc(var(--unit) * 6);
+	--switchHeight: calc(var(--unit) * 3);
+	--switchKnobSize: calc(var(--switchHeight) - var(--switchOffset) * 2);
+	--switchLabelGap: var(--space-s);
 }
 
 *, *:before, *:after {
   box-sizing: border-box;
 }
 
+*:focus {
+  outline-color: var(--c-primary);
+}
+
+*::-moz-selection {
+	background-color: var(--c-primary);
+	color: var(--c-grey-8);
+}
+*::selection {
+	background-color: var(--c-primary);
+	color: var(--c-grey-8);
+}
+
 body {
 	-webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-	background-color: var(--c-grey-1);
+	background-color: var(--c-grey-8);
 	margin: 0;
 	padding: var(--space-xl);
 	font-family: var(--fontFamily);
 	font-size: var(--fontSize-s);
 	line-height: var(--lineHeight-s);
-	color: var(--c-grey-6);
+	color: var(--c-grey-2);
+}
+
+@media (max-width: 720px) {
+	body {
+		padding: var(--space-l);
+	}
 }
 
 .cardTitle {
@@ -30,16 +76,17 @@ body {
 }
 
 .card {
-	background-color: white;
+	background-color: var(--c-grey-7);
+	color: var(--titleColor);
 	padding: var(--space-l);
-	box-shadow: var(--boxShadow-s);
+	border-radius: 6px;
 }
 
-button {
+.button {
 	font: inherit;
 	appearance: none;
 	border: none;
-	background-color: var(--c-grey-2);
+	background-color: var(--c-grey-6);
 	height: var(--textboxHeight);
 	padding: 0 var(--textboxHorizontalSpace);
 	font-size: var(--textboxFontSize);
@@ -47,46 +94,80 @@ button {
 	font-weight: var(--textboxFontWeight);
 	color: inherit;
 	cursor: pointer;
+	min-width: var(--space-2xl);
+	border-radius: var(--textboxBorderRadius);
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+.button:focus {
+	outline: none;
+	box-shadow: 0 0 0 2px var(--c-primary);
+}
+
+.button--type-primary {
+	background-color: var(--c-grey-1);
+	color: var(--c-grey-8);
+}
+
+.button--type-highlighted {
+	background-color: var(--c-primary);
+	color: var(--c-primary-2xdark);
 }
 
 .textInput {
 	font: inherit;
 	appearance: none;
-	border: 1px solid var(--c-grey-3);
-	background-color: white;
+	border: 2px solid var(--c-grey-6);
+	background-color: transparent;
 	height: var(--textboxHeight);
 	padding: 0 var(--textboxHorizontalSpace);
 	color: inherit;
-	/*font-size: var(--textboxFontSize);
-	line-height: var(--textboxLineHeight);*/
-	/*font-weight: var(--textboxFontWeight);*/
+	width: 100%;
+	border-radius: var(--textboxBorderRadius);
 }
 
-.button--type-primary {
-	background-color: var(--c-primary);
-	color: white;
+.textInput:focus {
+	outline: none;
+	border-color: var(--c-primary);
+	color: var(--c-grey-1);
 }
 
 .textboXSection {
 	display: flex;
+	flex-wrap: wrap;
+}
+
+.textboXSection .button {
+	margin-right: var(--space-s);
+	margin-bottom: var(--space-s);
 }
 
 .dialog {
-	background-color: white;
+	background-color: var(--overlayLayerBgColor);
 	padding: var(--space-l);
 	box-shadow: var(--boxShadow-s);
 	max-width: var(--space-4xl);
+	border-radius: 6px;
 }
 
 .dialogTitle {
+	color: var(--titleColor);
 	font-size: var(--fontSize-m);
 	line-height: var(--lineHeight-m);
 	font-weight: var(--fontWeight-700);
+}
+
+.dialogSubtitle {
+	margin-top: var(--space-s);
+}
+
+.dialogHeader {
 	margin-bottom: var(--space-m);
 }
 
 .dialogBody + .dialogFooter {
-	margin-top: var(--space-m);
+	margin-top: var(--space-l);
 }
 
 .dialogFooterButtons {
@@ -133,110 +214,163 @@ button {
 .tableHeadCell--width-4xl {width: var(--space-4xl)}
 .tableHeadCell--width-5xl {width: var(--space-5xl)}
 
-.switchKnob {
-	--offset: 2px;
-
-	width: calc(var(--space-m) - var(--offset) * 2);
-	height: calc(var(--space-m) - var(--offset) * 2);
-	background-color: white;
-	display: block;
-	position: relative;
-	top: var(--offset);
-	left: var(--offset);
-	border-radius: 50%;
-	transition: transform 0.1s;
-	z-index: 1;
+.fieldsContainer .fieldGroup + .fieldGroup {
+	margin-top: var(--space-m);
 }
 
-.switchLabel {
-	display: inline-block;
-	position: relative;
-	cursor: pointer;
-	width: var(--space-l);
-	height: var(--space-m);
+.fieldLabel {
+	margin-bottom: var(--space-s);
 }
 
-.switchTrack {
-	background-color: var(--c-grey-3);
-	width: var(--space-l);
-	height: var(--space-m);
-	display: block;
-	border-radius: 200px;
+:root {
+	--checkboxWidth: calc(var(--unit) * 3);
+	--checkboxLabelGap: var(--unit);
+}
+
+.checkboxInput,
+.radioInput {
 	position: absolute;
-	cursor: pointer;
-	top: 0;
-	transition: background-color 0.3s;
+	opacity: 0;
 }
 
-.switchInput:checked ~ .switchTrack {
+.checkboxWrapper,
+.radioWrapper {
+	position: relative;
+}
+
+.checkboxLabel,
+.radioLabel {
+	padding-left: calc(var(--checkboxWidth) + var(--checkboxLabelGap));
+}
+
+.checkboxLabel:before {
+	content: "";
+	width: calc(var(--unit) * 3);
+	height: calc(var(--unit) * 3);
+	display: block;
+	border-radius: 3px;
+	position: absolute;
+	left: 0;
+	background-color: var(--c-grey-5);
+}
+
+.radioLabel:before {
+	content: "";
+	width: calc(var(--unit) * 3);
+	height: calc(var(--unit) * 3);
+	display: block;
+	border-radius: 50%;
+	position: absolute;
+	left: 0;
+	background-color: var(--c-grey-5);
+}
+
+.checkboxInput:checked ~ .checkboxLabel:before,
+.radioInput:checked ~ .radioLabel:before {
 	background-color: var(--c-primary);
+}
+
+.checkboxInput:disabled ~ .checkboxLabel:before,
+.checkboxInput:disabled ~ .checkboxLabel,
+.radioInput:disabled ~ .radioLabel:before,
+.radioInput:disabled ~ .radioLabel,
+.switchInput:disabled ~ .switchLabel,
+.switchInput:disabled ~ .switchLabel:before {
+	opacity: var(--disabledOpacity);
+}
+
+.checkboxLabel:after {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 14px;
+	box-shadow: 2px 2px var(--c-grey-8);
+	transform: rotate(45deg);
+	position: absolute;
+	left: 8px;
+	top: 0;
+	opacity: 0;
+}
+
+.radioLabel:after {
+	content: "";
+	background-color: var(--c-grey-8);
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	border-radius: 50%;
+	position: absolute;
+	left: 7px;
+	top: 7px;
+	opacity: 0;
+}
+
+.checkboxInput:checked ~ .checkboxLabel:after,
+.radioInput:checked ~ .radioLabel:after {
+	opacity: 1;
+}
+
+.checkboxInput:focus ~ .checkboxLabel::before,
+.radioInput:focus ~ .radioLabel::before {
+	box-shadow: 0 0 0 2px var(--c-primary);
+}
+
+.checkboxInput:not(:disabled) ~ .checkboxLabel,
+.radioInput:not(:disabled) ~ .radioLabel,
+.switchInput:not(:disabled) ~ .switchLabel {
+	cursor: pointer;
 }
 
 .switchInput {
 	position: absolute;
 	opacity: 0;
-	top: 0;
+}
+
+.switchWrapper {
+	position: relative;
+}
+
+.switchLabel {
+	padding-left: calc(var(--switchWidth) + var(--switchLabelGap));
+}
+
+.switchLabel:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	display: inline-block;
 	cursor: pointer;
+	width: var(--switchWidth);
+	height: var(--switchHeight);
+	background-color: var(--c-grey-5);
+	border-radius: var(--space-m);
 }
 
-.switchInput:checked ~ .switchKnob {
-	transform: translateX(var(--space-m));
+.switchInput:checked ~ .switchLabel:before {
+	background-color: var(--c-primary);
 }
 
-.layout {
-  display: flex;
+.switchLabel:after {
+	content: "";
+	width: var(--switchKnobSize);
+	height: var(--switchKnobSize);
+	background-color: var(--c-grey-8);
+	display: block;
+	position: absolute;
+	top: var(--switchOffset);
+	left: var(--switchOffset);
+	border-radius: 50%;
+	transition: transform 0.1s;
 }
 
-.layout--gap-s .layoutItem:not(:last-child) {margin-right: var(--space-s)}
-.layout--gap-m .layoutItem:not(:last-child) {margin-right: var(--space-m)}
-.layout--gap-l .layoutItem:not(:last-child) {margin-right: var(--space-l)}
-.layout--gap-xl .layoutItem:not(:last-child) {margin-right: var(--space-xl)}
-
-.layout--align-center {
-  justify-content: center;
+.switchInput:checked ~ .switchLabel:after {
+	transform: translateX(calc(var(--switchWidth) - var(--switchKnobSize) - var(--switchOffset) * 2));
 }
 
-.layoutItem--width-remaining {
-  flex: 1 0;
+.switchInput:focus ~ .switchLabel::before {
+	box-shadow: 0 0 0 2px var(--c-primary);
 }
 
-.layoutItem--width-s {width: var(--space-s)}
-.layoutItem--width-m {width: var(--space-m)}
-.layoutItem--width-l {width: var(--space-l)}
-.layoutItem--width-xl {width: var(--space-xl)}
-.layoutItem--width-2xl {width: var(--space-2xl)}
-.layoutItem--width-3xl {width: var(--space-3xl)}
-.layoutItem--width-4xl {width: var(--space-4xl)}
-.layoutItem--width-5xl {width: var(--space-5xl)}
-
-.layout--maxWidth-s {max-width: var(--space-s)}
-.layout--maxWidth-m {max-width: var(--space-m)}
-.layout--maxWidth-l {max-width: var(--space-l)}
-.layout--maxWidth-xl {max-width: var(--space-xl)}
-.layout--maxWidth-2xl {max-width: var(--space-2xl)}
-.layout--maxWidth-3xl {max-width: var(--space-3xl)}
-.layout--maxWidth-4xl {max-width: var(--space-4xl)}
-.layout--maxWidth-5xl {max-width: var(--space-5xl)}
-
-.distribute {
-  display: flex;
-}
-
-.distribute--gap-s.distribute--orientation-horizontal > *:not(:last-child) {margin-right: var(--space-s)}
-.distribute--gap-m.distribute--orientation-horizontal > *:not(:last-child) {margin-right: var(--space-m)}
-.distribute--gap-l.distribute--orientation-horizontal > *:not(:last-child) {margin-right: var(--space-l)}
-.distribute--gap-xl.distribute--orientation-horizontal > *:not(:last-child) {margin-right: var(--space-xl)}
-
-.distribute--gap-s.distribute--orientation-vertical > *:not(:last-child) {margin-bottom: var(--space-s)}
-.distribute--gap-m.distribute--orientation-vertical > *:not(:last-child) {margin-bottom: var(--space-m)}
-.distribute--gap-l.distribute--orientation-vertical > *:not(:last-child) {margin-bottom: var(--space-l)}
-.distribute--gap-xl.distribute--orientation-vertical > *:not(:last-child) {margin-bottom: var(--space-xl)}
-
-.distribute--alignment-start {align-items: flex-start}
-.distribute--alignment-center {align-items: center}
-.distribute--alignment-end {align-items: flex-end}
-
-
-.distribute--orientation-vertical {
-  flex-direction: column;
+.switchInput:not(:disabled) ~ .switchLabel {
+	cursor: pointer;
 }

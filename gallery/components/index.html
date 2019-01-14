@@ -17,13 +17,13 @@
   <body>
     
     <div class="textSize-m fontWeight-700 spacerBottom-m">Card</div>
-    <div class="maxWidth-5xl">
+    <div class="maxWidth-4xl">
       <div class="card">
         <div class="cardTitle">
           The studio‘s compilation series
         </div>
         <div class="cardContent">
-          Sessions have included artists from Southern California and across the States such as the Bastard Sons of Johnny Cash, Whiskey Shivers, Mother Falcon, Jesca Hoop, and My Goodness. More recently we‘ve been working on new albums for Jack Lawtey, Jeremiah Tall, The Peach Kings, and Old Man Canyon. From the beginning the Lost Ark Studio has been more of a home studio than a typical ‚for hire‘ studio. We designed it ourselves, we‘ve expanded it in response to what we‘ve learned through thousands of sessions and, regardless of who‘s recording with us, they are our guests, not clients. Add in that we have well over 200 vintage guitars, 100 vintage amps, and more than a few vintage keyboards, drum kits, snares, synths, etc. and it‘s not a bad place to call home!“
+          Sessions have included artists from Southern California and across the States such as the Bastard Sons of Johnny Cash, Whiskey Shivers, Mother Falcon, Jesca Hoop, and My Goodness. More recently we‘ve been working on new albums for Jack Lawtey, Jeremiah Tall, The Peach Kings, and Old Man Canyon. From the beginning the Lost Ark Studio has been more of a home studio than a typical ‚for hire‘ studio.
         </div>
       </div>
     </div>
@@ -31,40 +31,161 @@
     <div class="textSize-m fontWeight-700 spacerBottom-l spacerTop-xl">Button</div>
       
     <div class="textboXSection">
-      <button>Default</button>
+      <button class="button button--type-highlighted">Default</button>
 
-      <div class="spacerRight-s"></div>
+      <button class="button">Default</button>
 
-      <button class="button--type-primary">Primary</button>
+      <button class="button button--type-primary">Primary</button>
 
-      <div class="spacerRight-s"></div>
-
-      <input type="text" value="Input" class="textInput">
+      <button class="button">Button with longer</button>
     </div>
 
     <div class="textSize-m fontWeight-700 spacerBottom-l spacerTop-xl">Switch</div>
 
-    <label class="switchLabel tabindex="0">
-      <input type="checkbox" class="switchInput">
-      <span class="switchKnob"></span>
-      <span class="switchTrack"></span>
-    </label>
+    <div class="switchWrapper">
+      <input id="switch-1" type="checkbox" class="switchInput" checked>
+      <label for="switch-1" class="switchLabel">Switch</label>
+    </div>
+
+    <div class="spacerBottom-s"></div>
+
+    <div class="switchWrapper">
+      <input id="switch-2" type="checkbox" class="switchInput" checked disabled>
+      <label for="switch-2" class="switchLabel">Switch disabled</label>
+    </div>
+
+    <div class="spacerBottom-s"></div>
+
+    <div class="switchWrapper">
+      <input id="switch-3" type="checkbox" class="switchInput" disabled>
+      <label for="switch-3" class="switchLabel">Switch disabled</label>
+    </div>
+
+    <div class="textSize-m fontWeight-700 spacerBottom-l spacerTop-xl">Radio</div>
+
+    <div class="radioWrapper">
+      <input id="radio-1" type="radio" class="radioInput" name="radioDemo">
+      <label for="radio-1" class="radioLabel">Checkbox</label>
+    </div>
+
+    <div class="spacerBottom-s"></div>
+
+    <div class="radioWrapper">
+      <input id="radio-2" type="radio" class="radioInput" name="radioDemo">
+      <label for="radio-2" class="radioLabel">Checkbox</label>
+    </div>
+
+    <div class="spacerBottom-s"></div>
+
+    <div class="radioWrapper">
+      <input id="radio-3" type="radio" class="radioInput" name="radioDemo" checked disabled>
+      <label for="radio-3" class="radioLabel">Checkbox</label>
+    </div>
+    
+    <div class="spacerBottom-s"></div>
+    
+    <div class="radioWrapper">
+      <input id="radio-4" type="radio" class="radioInput" name="radioDemo" disabled>
+      <label for="radio-4" class="radioLabel">Some text</label>
+    </div>
+
+    <div class="textSize-m fontWeight-700 spacerBottom-l spacerTop-xl">Checkbox</div>
+
+    <div class="checkboxWrapper">
+      <input id="checkbox-1" type="checkbox" class="checkboxInput" checked>
+      <label for="checkbox-1" class="checkboxLabel">Radio</label>
+    </div>
+
+    <div class="spacerBottom-s"></div>
+
+    <div class="checkboxWrapper">
+      <input id="checkbox-2" type="checkbox" class="checkboxInput">
+      <label for="checkbox-2" class="checkboxLabel">Radio</label>
+    </div>
+
+    <div class="spacerBottom-s"></div>
+
+    <div class="checkboxWrapper">
+      <input id="checkbox-3" type="checkbox" class="checkboxInput" disabled checked>
+      <label for="checkbox-3" class="checkboxLabel">Radio disabled</label>
+    </div>
+
+    <div class="spacerBottom-s"></div>
+
+    <div class="checkboxWrapper">
+      <input id="checkbox-4" type="checkbox" class="checkboxInput" disabled>
+      <label for="checkbox-4" class="checkboxLabel">Radio disabled</label>
+    </div>
+
+    <div class="textSize-m fontWeight-700 spacerBottom-l spacerTop-xl">Field group</div>
+
+    <div class="fieldsContainer">
+      <div class="fieldGroup">
+        <div class="fieldLabel">
+          Name
+        </div>
+        <input type="text" value="Input" class="textInput">
+      </div>
+      <div class="fieldGroup">
+        <div class="fieldLabel">
+          Name
+        </div>
+        <input type="text" value="Input" class="textInput">
+      </div>
+    </div>
 
     <div class="textSize-m fontWeight-700 spacerBottom-l spacerTop-xl">Dialog</div>
 
     <div class="dialog">
       <div class="dialogHeader">
         <div class="dialogTitle">
-          Dialog title
+          Wanna Banana?
         </div>
       </div>
       <div class="dialogBody">
-        Sessions have included artists from Southern California and across the States such as the Bastard Sons of Johnny Cash, Whiskey Shivers, Mother Falcon, Jesca Hoop, and My Goodness. More recently we‘ve been working on new albums for Jack Lawtey, Jeremiah Tall, The Peach Kings, and Old Man Canyon.
+        In some cases, they were only able to retrieve fragments of DNA; in other instances, they found enough material for an accurate reconstruction of the entire genome.
       </div>
       <div class="dialogFooter">
         <div class="dialogFooterButtons">
-          <button>Cancel</button>
-          <button class="button--type-primary">Confirm</button>
+          <button class="button">Cancel</button>
+          <button class="button button--type-primary">Confirm</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="spacerBottom-l"></div>
+
+    <div class="dialog">
+      <div class="dialogHeader">
+        <div class="dialogTitle">
+          Wanna Banana?
+        </div>
+        <div class="dialogSubtitle">
+          In some cases, they were only able to retrieve fragments of DNA; in other instances, they found enough material for an accurate reconstruction of the entire genome.
+        </div>
+      </div>
+      
+      <div class="dialogBody">
+        <div class="fieldsContainer">
+          <div class="fieldGroup">
+            <div class="fieldLabel">
+              Name
+            </div>
+            <input type="text" value="Input" class="textInput">
+          </div>
+          <div class="fieldGroup">
+            <div class="fieldLabel">
+              Name
+            </div>
+            <input type="text" value="Input" class="textInput">
+          </div>
+        </div>
+      </div>
+
+      <div class="dialogFooter">
+        <div class="dialogFooterButtons">
+          <button class="button">Cancel</button>
+          <button class="button button--type-primary">Confirm</button>
         </div>
       </div>
     </div>
@@ -86,52 +207,6 @@
         <div class="tableCell">1</div>
         <div class="tableCell">tableCell 2</div>
         <div class="tableCell">tableCell 2</div>
-      </div>
-    </div>
-
-    <div class="textSize-m fontWeight-700 spacerBottom-l spacerTop-xl">Distribute</div>
-    
-    <div class="spaceframe-m bg-grey-2 spacerBottom-m">
-      <div class="distribute distribute--gap-m distribute--orientation-horizontal">
-        <div class="height-xl width-xl bg-grey-3"></div>
-        <div class="height-l width-xl bg-grey-3"></div>
-        <div class="height-l width-l bg-grey-3"></div>
-      </div>
-    </div>
-
-    <div class="spaceframe-m bg-grey-2">
-      <div class="distribute distribute--gap-m distribute--orientation-vertical">
-        <div class="height-xl width-xl bg-grey-3"></div>
-        <div class="height-l width-xl bg-grey-3"></div>
-        <div class="height-l width-l bg-grey-3"></div>
-      </div>
-    </div>
-
-    <div class="textSize-m fontWeight-700 spacerBottom-l spacerTop-xl">Layout</div>
-    
-    <div class="spaceframe-m bg-grey-2">
-      <div class="layout layout--gap-l spacerBottom-l">
-        <div class="layoutItem layoutItem--width-3xl bg-grey-3">
-          <div class="height-xl"></div>
-        </div>
-
-        <div class="layoutItem layoutItem--width-remaining bg-grey-3">
-          <div class="height-xl"></div>
-        </div>
-      </div>
-
-      <div class="layout layout--gap-l">
-        <div class="layoutItem layoutItem--width-remaining bg-grey-3">
-          <div class="height-xl"></div>
-        </div>
-
-        <div class="layoutItem layoutItem--width-remaining bg-grey-3">
-          <div class="height-xl"></div>
-        </div>
-
-        <div class="layoutItem layoutItem--width-remaining bg-grey-3">
-          <div class="height-xl"></div>
-        </div>
       </div>
     </div>
     
