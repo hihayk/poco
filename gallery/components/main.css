@@ -15,7 +15,7 @@
 	--boxShadow-s: 0 4px 8px rgba(0,0,0,0.1);
 	
 	--textboxHeight: calc(var(--unit) * 5);
-	--textboxHorizontalSpace: var(--space-m);
+	--textboxHorizontalSpace: var(--space-s);
 	--textboxFontSize: var(--fontSize-s);
 	--textboxLineHeight: var(--lineHeight-s);
 	--textboxFontWeight: var(--fontWeight-400);
@@ -74,6 +74,18 @@ body {
 	max-width: 100%;
 	height: auto;
 }
+
+.variableColor:nth-child(1) { fill: var(--c-primary) }
+.variableColor:nth-child(2) { fill: var(--c-primary-light) }
+.variableColor:nth-child(3) { fill: var(--c-primary-dark) }
+.variableColor:nth-child(4) { fill: var(--c-primary-light) }
+.variableColor:nth-child(5) { fill: var(--c-primary-2xlight) }
+.variableColor:nth-child(6) { fill: var(--c-primary-2xdark) }
+.variableColor:nth-child(7) { fill: var(--c-primary-xlight) }
+.variableColor:nth-child(8) { fill: var(--c-primary-xdark) }
+.variableColor:nth-child(9) { fill: var(--c-primary-2xdark) }
+.variableColor:nth-child(10) { fill: var(--c-primary-xdark) }
+.variableColor:nth-child(11) { fill: var(--c-primary-2xlight) }
 
 .cardTitle {
 	font-weight: var(--fontWeight-700);
