@@ -18,7 +18,7 @@
 	--boxShadow-s: 0 4px 8px rgba(0,0,0,0.1);
 	
 	--textboxHeight: calc(var(--unit) * 5);
-	--textboxHorizontalSpace: var(--space-s);
+	--textboxHorizontalSpace: 10px;
 	--textboxFontSize: var(--fontSize-s);
 	--textboxLineHeight: var(--lineHeight-s);
 	--textboxFontWeight: var(--fontWeight-400);
