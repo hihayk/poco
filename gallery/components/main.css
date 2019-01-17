@@ -9,6 +9,9 @@
   --colorLightnessIncrement: 12%;
 
   --fontFamily: IBM plex sans;
+
+  --fontSize-2xl: 60px;
+  --lineHeight-2xl: calc(var(--unit) * 8);
 }
 
 :root {
@@ -390,4 +393,87 @@ body {
 
 .switchInput:not(:disabled) ~ .switchLabel {
 	cursor: pointer;
+}
+
+.docSection {
+	margin-bottom: var(--space-xl);
+}
+
+.logo {
+	margin-bottom: var(--space-2xl);
+	font-size: var(--fontSize-m);
+	line-height: var(--lineHeight-m);
+	font-weight: var(--fontWeight-700);
+	color: var(--c-primary);
+}
+
+.docSectionTitle {
+	margin-bottom: var(--space-l);
+	font-size: var(--fontSize-m);
+	line-height: var(--lineHeight-m);
+	font-weight: var(--fontWeight-700);
+	color: var(--c-grey-1);
+}
+
+.docPreviewSection {
+	max-width: var(--space-5xl);
+}
+
+.docPreviewDistribute--orientation-vertical > *:not(:last-child) {
+	margin-bottom: var(--space-s);
+}
+
+.docPreviewDistribute--orientation-horizontal {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.docPreviewDistribute--orientation-horizontal > * {
+	margin-bottom: var(--space-s);
+}
+
+.docPreviewDistribute--orientation-horizontal > *:not(:last-child) {
+	margin-right: var(--space-s);
+}
+
+.mainContainer {
+	max-width: var(--space-5xl);
+	margin: 0 auto;	
+}
+
+.textSize-xs {
+  font-size: var(--fontSize-xs);
+  line-height: var(--lineHeight-xs);
+}
+
+.textSize-s {
+  font-size: var(--fontSize-s);
+  line-height: var(--lineHeight-s);
+}
+
+.textSize-m {
+  font-size: var(--fontSize-m);
+  line-height: var(--lineHeight-m);
+}
+
+.textSize-l {
+  font-size: var(--fontSize-l);
+  line-height: var(--lineHeight-l);
+}
+
+.textSize-xl {
+  font-size: var(--fontSize-xl);
+  line-height: var(--lineHeight-xl);
+}
+
+.textSize-2xl {
+  font-size: var(--fontSize-2xl);
+  line-height: var(--lineHeight-2xl);
+}
+
+.textDemoPrimary {
+
+}
+.textDemoSecondary {
+	color: var(--c-grey-6);
 }
