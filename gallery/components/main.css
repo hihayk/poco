@@ -1,0 +1,479 @@
+:root {
+	--initialGreyLightness: 68%;
+	--greyscaleLightnessIncrement: 8%;
+
+	--c-primary-hue: 38;
+  --c-primary-saturation: 85%;
+  --c-primary-lightness: 54%;
+
+  --colorLightnessIncrement: 12%;
+
+  --fontFamily: IBM plex sans;
+
+  --fontSize-2xl: 60px;
+  --lineHeight-2xl: calc(var(--unit) * 8);
+}
+
+:root {
+	--boxShadow-s: 0 4px 8px rgba(0,0,0,0.1);
+	
+	--textboxHeight: calc(var(--unit) * 5);
+	--textboxHorizontalSpace: 10px;
+	--textboxFontSize: var(--fontSize-s);
+	--textboxLineHeight: var(--lineHeight-s);
+	--textboxFontWeight: var(--fontWeight-400);
+
+	--textboxBorderRadius: 3px;
+
+	--titleColor: var(--c-grey-1);
+	--overlayLayerBgColor: var(--c-grey-7);
+
+	--disabledOpacity: 0.5;
+
+	--switchOffset: 4px;
+	--switchWidth: calc(var(--unit) * 6);
+	--switchHeight: calc(var(--unit) * 3);
+	--switchKnobSize: calc(var(--switchHeight) - var(--switchOffset) * 2);
+	--switchLabelGap: var(--space-s);
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline-color: var(--c-primary);
+}
+
+*::-moz-selection {
+	background-color: var(--c-primary);
+	color: var(--c-grey-8);
+}
+*::selection {
+	background-color: var(--c-primary);
+	color: var(--c-grey-8);
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+	background-color: var(--c-grey-8);
+	margin: 0;
+	padding: var(--space-xl);
+	font-family: var(--fontFamily);
+	font-size: var(--fontSize-s);
+	line-height: var(--lineHeight-s);
+	color: var(--c-grey-2);
+}
+
+@media (max-width: 720px) {
+	body {
+		padding: var(--space-l);
+	}
+}
+
+.colorsSection svg {
+	max-width: 100%;
+	height: auto;
+}
+
+.variableColor:nth-child(1) { fill: var(--c-primary) }
+.variableColor:nth-child(2) { fill: var(--c-primary-light) }
+.variableColor:nth-child(3) { fill: var(--c-primary-dark) }
+.variableColor:nth-child(4) { fill: var(--c-primary-light) }
+.variableColor:nth-child(5) { fill: var(--c-primary-2xlight) }
+.variableColor:nth-child(6) { fill: var(--c-primary-2xdark) }
+.variableColor:nth-child(7) { fill: var(--c-primary-xlight) }
+.variableColor:nth-child(8) { fill: var(--c-primary-xdark) }
+.variableColor:nth-child(9) { fill: var(--c-primary-2xdark) }
+.variableColor:nth-child(10) { fill: var(--c-primary-xdark) }
+.variableColor:nth-child(11) { fill: var(--c-primary-2xlight) }
+
+.cardTitle {
+	font-weight: var(--fontWeight-700);
+	margin-bottom: var(--space-m);
+}
+
+.card {
+	background-color: var(--c-grey-7);
+	color: var(--titleColor);
+	padding: var(--space-l);
+	border-radius: 6px;
+}
+
+.button {
+	font: inherit;
+	appearance: none;
+	border: none;
+	background-color: var(--c-grey-6);
+	height: var(--textboxHeight);
+	padding: 0 var(--textboxHorizontalSpace);
+	font-size: var(--textboxFontSize);
+	line-height: var(--textboxLineHeight);
+	font-weight: var(--textboxFontWeight);
+	color: inherit;
+	cursor: pointer;
+	min-width: var(--space-2xl);
+	border-radius: var(--textboxBorderRadius);
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+.button:focus {
+	outline: none;
+	box-shadow: 0 0 0 2px var(--c-primary);
+}
+
+.button--type-primary {
+	background-color: var(--c-grey-1);
+	color: var(--c-grey-8);
+}
+
+.button--type-highlighted {
+	background-color: var(--c-primary);
+	color: var(--c-primary-2xdark);
+}
+
+.textInput {
+	font: inherit;
+	appearance: none;
+	border: 2px solid var(--c-grey-6);
+	background-color: transparent;
+	height: var(--textboxHeight);
+	padding: 0 var(--textboxHorizontalSpace);
+	color: inherit;
+	width: 100%;
+	border-radius: var(--textboxBorderRadius);
+}
+
+.textInput:focus {
+	outline: none;
+	border-color: var(--c-primary);
+	color: var(--c-grey-1);
+}
+
+.textboXSection {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.textboXSection .button {
+	margin-right: var(--space-s);
+	margin-bottom: var(--space-s);
+}
+
+.dialog {
+	background-color: var(--overlayLayerBgColor);
+	padding: var(--space-l);
+	box-shadow: var(--boxShadow-s);
+	max-width: var(--space-4xl);
+	border-radius: 6px;
+}
+
+.dialogTitle {
+	color: var(--titleColor);
+	font-size: var(--fontSize-m);
+	line-height: var(--lineHeight-m);
+	font-weight: var(--fontWeight-700);
+}
+
+.dialogSubtitle {
+	margin-top: var(--space-s);
+}
+
+.dialogHeader {
+	margin-bottom: var(--space-m);
+}
+
+.dialogBody + .dialogFooter {
+	margin-top: var(--space-l);
+}
+
+.dialogFooterButtons {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.dialogFooterButtons button + button {
+	margin-left: var(--space-s);
+}
+
+.table {
+	display: table;
+	width: 100%;
+}
+
+.tableRow {
+	display: table-row;
+}
+
+.tableHeadCell {
+	display: table-cell;
+	height: var(--space-l);
+	border-bottom: 1px solid rgba(0,0,0,0.15);
+	font-weight: var(--fontWeight-700);
+	font-size: var(--fontSize-xs);
+	line-height: var(--lineHeight-xs);
+}
+
+.tableCell {
+	display: table-cell;
+	height: var(--space-xl);
+	vertical-align: middle;
+	border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.tableHeadCell--width-xs {width: var(--space-xs)}
+.tableHeadCell--width-s {width: var(--space-s)}
+.tableHeadCell--width-m {width: var(--space-m)}
+.tableHeadCell--width-l {width: var(--space-l)}
+.tableHeadCell--width-xl {width: var(--space-xl)}
+.tableHeadCell--width-2xl {width: var(--spa2e-2xl)}
+.tableHeadCell--width-3xl {width: var(--space-3xl)}
+.tableHeadCell--width-4xl {width: var(--space-4xl)}
+.tableHeadCell--width-5xl {width: var(--space-5xl)}
+
+.fieldsContainer .fieldGroup + .fieldGroup {
+	margin-top: var(--space-m);
+}
+
+.fieldLabel {
+	margin-bottom: var(--space-s);
+}
+
+:root {
+	--checkboxWidth: calc(var(--unit) * 3);
+	--checkboxLabelGap: var(--unit);
+}
+
+.checkboxInput,
+.radioInput {
+	position: absolute;
+	opacity: 0;
+}
+
+.checkboxWrapper,
+.radioWrapper {
+	position: relative;
+}
+
+.checkboxLabel,
+.radioLabel {
+	padding-left: calc(var(--checkboxWidth) + var(--checkboxLabelGap));
+}
+
+.checkboxLabel:before {
+	content: "";
+	width: calc(var(--unit) * 3);
+	height: calc(var(--unit) * 3);
+	display: block;
+	border-radius: 3px;
+	position: absolute;
+	left: 0;
+	background-color: var(--c-grey-5);
+}
+
+.radioLabel:before {
+	content: "";
+	width: calc(var(--unit) * 3);
+	height: calc(var(--unit) * 3);
+	display: block;
+	border-radius: 50%;
+	position: absolute;
+	left: 0;
+	background-color: var(--c-grey-5);
+}
+
+.checkboxInput:checked ~ .checkboxLabel:before,
+.radioInput:checked ~ .radioLabel:before {
+	background-color: var(--c-primary);
+}
+
+.checkboxInput:disabled ~ .checkboxLabel:before,
+.checkboxInput:disabled ~ .checkboxLabel,
+.radioInput:disabled ~ .radioLabel:before,
+.radioInput:disabled ~ .radioLabel,
+.switchInput:disabled ~ .switchLabel,
+.switchInput:disabled ~ .switchLabel:before {
+	opacity: var(--disabledOpacity);
+}
+
+.checkboxLabel:after {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 14px;
+	box-shadow: 2px 2px var(--c-grey-8);
+	transform: rotate(45deg);
+	position: absolute;
+	left: 8px;
+	top: 0;
+	opacity: 0;
+}
+
+.radioLabel:after {
+	content: "";
+	background-color: var(--c-grey-8);
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	border-radius: 50%;
+	position: absolute;
+	left: 7px;
+	top: 7px;
+	opacity: 0;
+}
+
+.checkboxInput:checked ~ .checkboxLabel:after,
+.radioInput:checked ~ .radioLabel:after {
+	opacity: 1;
+}
+
+.checkboxInput:focus ~ .checkboxLabel::before,
+.radioInput:focus ~ .radioLabel::before {
+	box-shadow: 0 0 0 2px var(--c-primary);
+}
+
+.checkboxInput:not(:disabled) ~ .checkboxLabel,
+.radioInput:not(:disabled) ~ .radioLabel,
+.switchInput:not(:disabled) ~ .switchLabel {
+	cursor: pointer;
+}
+
+.switchInput {
+	position: absolute;
+	opacity: 0;
+}
+
+.switchWrapper {
+	position: relative;
+}
+
+.switchLabel {
+	padding-left: calc(var(--switchWidth) + var(--switchLabelGap));
+}
+
+.switchLabel:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	display: inline-block;
+	cursor: pointer;
+	width: var(--switchWidth);
+	height: var(--switchHeight);
+	background-color: var(--c-grey-5);
+	border-radius: var(--space-m);
+}
+
+.switchInput:checked ~ .switchLabel:before {
+	background-color: var(--c-primary);
+}
+
+.switchLabel:after {
+	content: "";
+	width: var(--switchKnobSize);
+	height: var(--switchKnobSize);
+	background-color: var(--c-grey-8);
+	display: block;
+	position: absolute;
+	top: var(--switchOffset);
+	left: var(--switchOffset);
+	border-radius: 50%;
+	transition: transform 0.1s;
+}
+
+.switchInput:checked ~ .switchLabel:after {
+	transform: translateX(calc(var(--switchWidth) - var(--switchKnobSize) - var(--switchOffset) * 2));
+}
+
+.switchInput:focus ~ .switchLabel::before {
+	box-shadow: 0 0 0 2px var(--c-primary);
+}
+
+.switchInput:not(:disabled) ~ .switchLabel {
+	cursor: pointer;
+}
+
+.docSection {
+	margin-bottom: var(--space-xl);
+}
+
+.logo {
+	margin-bottom: var(--space-2xl);
+	font-size: var(--fontSize-m);
+	line-height: var(--lineHeight-m);
+	font-weight: var(--fontWeight-700);
+	color: var(--c-primary);
+}
+
+.docSectionTitle {
+	margin-bottom: var(--space-l);
+	font-size: var(--fontSize-m);
+	line-height: var(--lineHeight-m);
+	font-weight: var(--fontWeight-700);
+	color: var(--c-grey-1);
+}
+
+.docPreviewSection {
+	max-width: var(--space-5xl);
+}
+
+.docPreviewDistribute--orientation-vertical > *:not(:last-child) {
+	margin-bottom: var(--space-s);
+}
+
+.docPreviewDistribute--orientation-horizontal {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.docPreviewDistribute--orientation-horizontal > * {
+	margin-bottom: var(--space-s);
+}
+
+.docPreviewDistribute--orientation-horizontal > *:not(:last-child) {
+	margin-right: var(--space-s);
+}
+
+.mainContainer {
+	max-width: var(--space-5xl);
+	margin: 0 auto;	
+}
+
+.textSize-xs {
+  font-size: var(--fontSize-xs);
+  line-height: var(--lineHeight-xs);
+}
+
+.textSize-s {
+  font-size: var(--fontSize-s);
+  line-height: var(--lineHeight-s);
+}
+
+.textSize-m {
+  font-size: var(--fontSize-m);
+  line-height: var(--lineHeight-m);
+}
+
+.textSize-l {
+  font-size: var(--fontSize-l);
+  line-height: var(--lineHeight-l);
+}
+
+.textSize-xl {
+  font-size: var(--fontSize-xl);
+  line-height: var(--lineHeight-xl);
+}
+
+.textSize-2xl {
+  font-size: var(--fontSize-2xl);
+  line-height: var(--lineHeight-2xl);
+}
+
+.textDemoPrimary {
+
+}
+.textDemoSecondary {
+	color: var(--c-grey-6);
+}

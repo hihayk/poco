@@ -1,0 +1,594 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>poco.</title>
+    <meta name="description" content="minimal set of CSS variables and utilities">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="" id="themeMetaTag">
+    <link rel="icon" href="docs/favicon.png">
+
+    <link rel="stylesheet" href="poco.css">
+    <link rel="stylesheet" href="poco-utilities.css">
+    <link rel="stylesheet" href="main.css">
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </head>
+
+  <body class="theme-dark">
+    
+    <section class="introSection">
+      <h1 class="introTitle">
+        minimal set of CSS variables and utilities
+      </h1>
+
+      <div class="logo-container">
+        <svg width="623" height="204" viewBox="0 0 623 204" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M88.3901 0.86C66.5941 0.86 49.8601 11.828 41.7031 29.547H40.8591V3.25H0.360107V203.219H41.4231V128.688H42.2671C50.2821 145.703 67.1571 156.391 89.0951 156.391C126.782 156.391 150.126 127.141 150.126 78.625C150.126 29.969 126.642 0.859 88.3921 0.859L88.3901 0.86ZM74.6101 123.343C54.5001 123.343 41.2811 105.905 41.2811 78.624C41.2811 51.624 54.5001 33.764 74.6091 33.764C95.1411 33.764 108.078 51.343 108.078 78.624C108.078 106.046 95.1411 123.343 74.6091 123.343H74.6101Z"/>
+        <path d="M223.267 157.234C268.829 157.234 297.939 128.125 297.939 78.484C297.939 29.547 268.408 0.0159998 223.267 0.0159998C178.126 0.0159998 148.595 29.688 148.595 78.484C148.595 127.984 177.704 157.234 223.267 157.234V157.234ZM223.267 125.875C203.017 125.875 190.22 108.859 190.22 78.625C190.22 48.672 203.298 31.375 223.267 31.375C243.236 31.375 256.173 48.672 256.173 78.625C256.173 108.859 243.376 125.875 223.267 125.875Z"/>
+        <path d="M438.862 59.36C437.034 25.187 411.159 0.0150003 370.378 0.0150003C325.237 0.0150003 296.409 30.108 296.409 78.483C296.409 127.702 325.237 157.233 370.659 157.233C410.315 157.233 436.893 134.311 439.003 98.733H400.753C398.221 115.187 387.534 125.03 371.081 125.03C350.69 125.03 338.034 108.155 338.034 78.483C338.034 49.374 350.69 32.218 370.94 32.218C387.815 32.218 398.362 43.468 400.753 59.358H438.862V59.36Z"/>
+        <path onclick="toggleTheme()" d="M622.505 133.047C622.505 145.562 612.38 155.688 599.864 155.688C587.208 155.688 577.224 145.562 577.224 133.047C577.224 120.391 587.208 110.406 599.864 110.406C612.38 110.406 622.505 120.391 622.505 133.047Z"/>
+        <path d="M510.738 157.234C556.301 157.234 585.41 128.125 585.41 78.484C585.41 29.547 555.879 0.0159998 510.738 0.0159998C465.598 0.0159998 436.066 29.688 436.066 78.484C436.066 127.984 465.176 157.234 510.738 157.234ZM510.738 125.875C490.488 125.875 477.691 108.859 477.691 78.625C477.691 48.672 490.769 31.375 510.738 31.375C530.707 31.375 543.644 48.672 543.644 78.625C543.644 108.859 530.848 125.875 510.738 125.875Z"/>
+        </svg>
+
+      </div>
+    </section>
+
+    <section class="docsSection">
+      <h3 class="sectionTitle">Typography</h3>
+      
+      <div class="docsSubsection">
+        <h4 class="subsectionTitle">Type scale</h4>
+
+        <div class="demoSection">
+          <div class="textSize-xs">Ag · 12px/16px</div>
+          <div class="textSize-s">Ag · 16px/24px</div>
+          <div class="textSize-m">Ag · 22px/32px</div>
+          <div class="textSize-l">Ag · 36px/40px</div>
+          <div class="textSize-xl">Ag · 44px/48px</div>
+        </div>
+
+        <div class="codeSection">
+          <div class="codeContainer">
+            <div class="codeContainerTitle">Variables</div>
+<pre><code>--fontSize-xs
+--lineHeight-xs
+
+--fontSize-s
+--lineHeight-s
+
+--fontSize-m
+--lineHeight-m
+
+--fontSize-l
+--lineHeight-l
+
+--fontSize-xl
+--lineHeight-xl
+</code></pre>
+          </div>
+
+          <div class="codeContainer">
+            <div class="codeContainerTitle">Utility classes</div>
+<pre><code>.textSize-xs
+.textSize-s
+.textSize-m
+.textSize-l
+.textSize-xl
+</code></pre>
+          </div>
+        </div>
+      
+      </div>
+
+      <div class="docsSubsection">
+        <h4 class="subsectionTitle">Weights</h4>
+
+        <div class="demoSection">
+          <div class="fontWeight-400">Ag · 400</div>
+          <div class="fontWeight-700">Ag · 700</div>
+        </div>
+
+        <div class="codeSection">
+          <div class="codeContainer">
+            <div class="codeContainerTitle">Variables</div>
+<pre><code>--fontWeight-400
+--fontWeight-700
+</code></pre>
+          </div>
+
+          <div class="codeContainer">
+            <div class="codeContainerTitle">Utility classes</div>
+<pre><code>.fontWeight-400
+.fontWeight-700
+</code></pre>
+          </div>
+        </div>
+      
+      </div>
+    </section>
+
+    <section class="docsSection">
+      <h3 class="sectionTitle">Spacing</h3>
+      <div class="docsSubsection">
+        <h4 class="subsectionTitle">Spaces</h4>
+        <p class="subsectionDescription">
+          Use spaces to define any apacing, widths and heights.
+          <br>
+          Spaces use x2 increment, each space is twice as big as the previous one to make sure there is a consistent contrast between.
+        </p>
+
+        <div class="demoSection">
+          <div class="width-s demo-space"></div>
+          <div class="width-m demo-space"></div>
+          <div class="width-l demo-space"></div>
+          <div class="width-xl demo-space"></div>
+          <div class="width-2xl demo-space"></div>
+          <div class="width-3xl demo-space"></div>
+          <div class="width-4xl demo-space"></div>
+          <div class="width-5xl demo-space"></div>
+        </div>
+
+        <div class="codeSection">
+          <div class="codeContainer">
+            <div class="codeContainerTitle">Variables</div>
+<pre><code>--space-s
+--space-m
+--space-l
+--space-xl
+--space-2xl
+--space-3xl
+--space-4xl
+--space-5xl
+</code></pre>
+          </div>
+
+          <div class="codeContainer">
+            <div class="codeContainerTitle">Utility classes</div>
+<pre><code>.width- s | m | l | xl | 2xl | 3xl | 4xl | 5xl
+.minWidth- s | m | l | xl | 2xl | 3xl | 4xl | 5xl
+.maxWidth- s | m | l | xl | 2xl | 3xl | 4xl | 5xl
+
+.heght- s | m | l | xl | 2xl | 3xl | 4xl | 5xl
+.minHeght- s | m | l | xl | 2xl | 3xl | 4xl | 5xl
+.maxHeght- s | m | l | xl | 2xl | 3xl | 4xl | 5xl
+</code></pre>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="docsSubsection">
+        <h4 class="subsectionTitle">Spaceframes</h4>
+        <p class="subsectionDescription">
+          Use spaceframes to define inner space in a container element.
+        </p>
+
+        <div class="demoSection">
+          <div class="distribute distribute--orientation-horizontal distribute--gap-s distribute--alignment-start">
+            <div class="spaceframe-s demo-spaceframeOuter">
+              <div class="demo-spaceframeInner"></div>
+            </div>
+            <div class="spaceframe-m demo-spaceframeOuter">
+              <div class="demo-spaceframeInner"></div>
+            </div>
+            <div class="spaceframe-l demo-spaceframeOuter">
+              <div class="demo-spaceframeInner"></div>
+            </div>
+            <div class="spaceframe-xl demo-spaceframeOuter">
+              <div class="demo-spaceframeInner"></div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="codeSection">
+          <div class="codeContainer">
+            <div class="codeContainerTitle">Variables</div>
+<pre><code>--spaceframe-s
+--spaceframe-m
+--spaceframe-l
+--spaceframe-xl
+</code></pre>
+          </div>
+
+          <div class="codeContainer">
+            <div class="codeContainerTitle">Utility classes</div>
+<pre><code>.spaceframe-s
+.spaceframe-m
+.spaceframe-l
+.spaceframe-xl
+</code></pre>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="docsSubsection">
+        <h4 class="subsectionTitle">Spacers</h4>
+        <p class="subsectionDescription">
+          Use spacer to define margins between elements.
+        </p>
+
+        <div class="demoSection">
+        
+          <div class="distribute distribute--orientation-vertical distribute--gap-s">
+            <div class="distribute distribute--orientation-horizontal distribute--gap-s distribute--alignment-start">
+              <div class="demo-spacerWrapper vertical">
+                <div class="demo-spacer spacerBottom-s"></div>
+              </div>
+              <div class="demo-spacerWrapper vertical">
+                <div class="demo-spacer spacerBottom-m"></div>
+              </div>
+              <div class="demo-spacerWrapper vertical">
+                <div class="demo-spacer spacerBottom-l"></div>
+              </div>
+              <div class="demo-spacerWrapper vertical">
+                <div class="demo-spacer spacerBottom-xl"></div>
+              </div>
+            </div>
+
+            <div class="distribute distribute--orientation-horizontal distribute--gap-s distribute--alignment-start">
+              <div class="demo-spacerWrapper">
+                <div class="demo-spacer spacerTop-s"></div>
+              </div>
+              <div class="demo-spacerWrapper">
+                <div class="demo-spacer spacerTop-m"></div>
+              </div>
+              <div class="demo-spacerWrapper">
+                <div class="demo-spacer spacerTop-l"></div>
+              </div>
+              <div class="demo-spacerWrapper">
+                <div class="demo-spacer spacerTop-xl"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="codeSection codeSection--columns-1">
+          <div class="codeContainer">
+            <div class="codeContainerTitle">Utility classes</div>
+<pre><code>.spacerBottom-s
+.spacerBottom-m
+.spacerBottom-l
+.spacerBottom-xl
+
+.spacerTop-s
+.spacerTop-m
+.spacerTop-l
+.spacerTop-xl
+</code></pre>
+          </div>
+        </div>
+
+        <div class="demoSection">
+          <div class="distribute distribute--orientation-horizontal distribute--gap-s distribute--alignment-start spacerBottom-s">
+            <div class="demo-spacerWrapper">
+              <div class="demo-spacer spacerRight-s"></div>
+            </div>
+            <div class="demo-spacerWrapper">
+              <div class="demo-spacer spacerRight-m"></div>
+            </div>
+            <div class="demo-spacerWrapper">
+              <div class="demo-spacer spacerRight-l"></div>
+            </div>
+            <div class="demo-spacerWrapper">
+              <div class="demo-spacer spacerRight-xl"></div>
+            </div>
+          </div>
+
+          <div class="distribute distribute--orientation-horizontal distribute--gap-s distribute--alignment-start">
+            <div class="demo-spacerWrapper">
+              <div class="demo-spacer spacerLeft-s"></div>
+            </div>
+            <div class="demo-spacerWrapper">
+              <div class="demo-spacer spacerLeft-m"></div>
+            </div>
+            <div class="demo-spacerWrapper">
+              <div class="demo-spacer spacerLeft-l"></div>
+            </div>
+            <div class="demo-spacerWrapper">
+              <div class="demo-spacer spacerLeft-xl"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="codeSection codeSection--columns-1">
+          <div class="codeContainer">
+            <div class="codeContainerTitle">Utility classes</div>
+<pre><code>.spacerRight-s
+.spacerRight-m
+.spacerRight-l
+.spacerRight-xl
+
+.spacerLeft-s
+.spacerLeft-m
+.spacerLeft-l
+.spacerLeft-xl
+</code></pre>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="docsSection">
+      <h3 class="sectionTitle">Color</h3>
+      <div class="docsSubsection">
+        <h4 class="subsectionTitle">Greyscale</h4>
+        
+        <div class="demoSection">
+          <div class="demoColors--gap-s">
+            <div class="demo-colorBox c-grey-1"><b>Aa</b></div>
+            <div class="demo-colorBox c-grey-2"><b>Aa</b></div>
+            <div class="demo-colorBox c-grey-3"><b>Aa</b></div>
+            <div class="demo-colorBox c-grey-4"><b>Aa</b></div>
+            <div class="demo-colorBox c-grey-5"><b>Aa</b></div>
+            <div class="demo-colorBox c-grey-6"><b>Aa</b></div>
+            <div class="demo-colorBox c-grey-7"><b>Aa</b></div>
+            <div class="demo-colorBox c-grey-8"><b>Aa</b></div>
+          </div>
+
+          <div class="demoColors--gap-s">
+            <div class="demo-colorBox bg-grey-1"></div>
+            <div class="demo-colorBox bg-grey-2"></div>
+            <div class="demo-colorBox bg-grey-3"></div>
+            <div class="demo-colorBox bg-grey-4"></div>
+            <div class="demo-colorBox bg-grey-5"></div>
+            <div class="demo-colorBox bg-grey-6"></div>
+            <div class="demo-colorBox bg-grey-7"></div>
+            <div class="demo-colorBox bg-grey-8"></div>
+          </div>
+        </div>
+
+        <div class="codeSection">
+          <div class="codeContainer">
+            <div class="codeContainerTitle">Variables</div>
+<pre><code>--c-grey-1
+--c-grey-2
+--c-grey-3
+--c-grey-4
+--c-grey-5
+--c-grey-6
+--c-grey-7
+--c-grey-8
+</code></pre>
+          </div>
+
+          <div class="codeContainer">
+            <div class="codeContainerTitle">Utility classes</div>
+<pre><code>.c-grey-1
+.c-grey-2
+.c-grey-3
+.c-grey-4
+.c-grey-5
+.c-grey-6
+.c-grey-7
+.c-grey-8
+
+.bg-grey-1
+.bg-grey-2
+.bg-grey-3
+.bg-grey-4
+.bg-grey-5
+.bg-grey-6
+.bg-grey-7
+.bg-grey-8
+</code></pre>
+          </div>
+        </div>
+
+        <div class="codeSection codeSection--columns-1">
+          <div class="codeContainer">
+            <div class="codeContainerTitle">To edit the greyscale change this variables</div>
+<pre><code>--initialGreyLightness: 93%
+--greyscaleLightnessIncrement: 11%
+</code></pre>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="docsSubsection">
+        <h4 class="subsectionTitle">Color shades</h4>
+        
+        <div class="demoSection">
+          <div class="demoColors">
+            <div class="demo-colorBox spacerRight-s c-primary-2xlight"><b>Aa</b></div>
+            <div class="demo-colorBox spacerRight-s c-primary-xlight"><b>Aa</b></div>
+            <div class="demo-colorBox spacerRight-l c-primary-light"><b>Aa</b></div>
+            <div class="demo-colorBox spacerRight-l c-primary"><b>Aa</b></div>
+            <div class="demo-colorBox spacerRight-s c-primary-dark"><b>Aa</b></div>
+            <div class="demo-colorBox spacerRight-s c-primary-xdark"><b>Aa</b></div>
+            <div class="demo-colorBox spacerRight-s c-primary-2xdark"><b>Aa</b></div>
+          </div>
+
+          <div class="demoColors">
+            <div class="demo-colorBox spacerRight-s bg-primary-2xlight"></div>
+            <div class="demo-colorBox spacerRight-s bg-primary-xlight"></div>
+            <div class="demo-colorBox spacerRight-l bg-primary-light"></div>
+            <div class="demo-colorBox spacerRight-l bg-primary"></div>
+            <div class="demo-colorBox spacerRight-s bg-primary-dark"></div>
+            <div class="demo-colorBox spacerRight-s bg-primary-xdark"></div>
+            <div class="demo-colorBox spacerRight-s bg-primary-2xdark"></div>
+          </div>
+        </div>
+
+        <div class="codeSection">
+          <div class="codeContainer">
+            <div class="codeContainerTitle">Variables</div>
+<pre><code>--c-primary-2xlight
+--c-primary-xlight
+--c-primary-light
+
+--c-primary
+
+--c-primary-dark
+--c-primary-xdark
+--c-primary-2xdark
+</code></pre>
+          </div>
+
+          <div class="codeContainer">
+            <div class="codeContainerTitle">Utility classes</div>
+<pre><code>.c-primary-2xlight
+.c-primary-xlight
+.c-primary-light
+
+.c-primary
+
+.c-primary-dark
+.c-primary-xdark
+.c-primary-2xdark
+</code></pre>
+            </div>
+          </div>
+
+          <div class="codeSection codeSection--columns-1">
+            <div class="codeContainer">
+              <div class="codeContainerTitle">To edit the primary color and its shades change this variables</div>
+<pre><code>--colorLightnessIncrement: 10%
+--c-primary-hue: 215
+--c-primary-saturation: 46%
+--c-primary-lightness: 50%
+</code></pre>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="docsSection">
+      <h3 class="sectionTitle">Get Poco</h3>
+      
+      <div class="docsSubsection">
+        <p>
+          Poco is ment to be customized and adapted to each project's needs.
+          <br>
+          Copy the <a href="https://raw.githubusercontent.com/hihayk/poco/master/poco.css" target="_blank">poco.css</a> to your project. Additionally you can get the utilities corresponding to each variable from <a href="https://raw.githubusercontent.com/hihayk/poco/master/poco-utilities.css" target="_blank">poco-utilities.css</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="docsSection">
+      <h3 class="sectionTitle">Meta</h3>
+      
+      <div class="docsSubsection">
+        <div class="codeSection codeSection--columns-1">
+          <div class="codeContainer">
+            <div class="codeContainerTitle">All variables</div>
+<pre><code>--unit: 8px;
+--fontFamily: -apple-system, BlinkMacSystemFont, sans-serif;
+
+--spaceIncrement: 2;
+
+--space-s: var(--unit);
+--space-m: calc(var(--unit) * var(--spaceIncrement));
+--space-l: calc(var(--space-m) * var(--spaceIncrement));
+--space-xl: calc(var(--space-l) * var(--spaceIncrement));
+--space-2xl: calc(var(--space-xl) * var(--spaceIncrement));
+--space-3xl: calc(var(--space-2xl) * var(--spaceIncrement));
+--space-4xl: calc(var(--space-3xl) * var(--spaceIncrement));
+--space-5xl: calc(var(--space-4xl) * var(--spaceIncrement));
+
+--spaceframe-s: var(--space-s);
+--spaceframe-m: var(--space-m);
+--spaceframe-l: var(--space-l);
+--spaceframe-xl: var(--space-xl);
+
+--fontSize-xs: 12px;
+--lineHeight-xs: calc(var(--unit) * 2);
+
+--fontSize-s: 16px;
+--lineHeight-s: calc(var(--unit) * 3);
+
+--fontSize-m: 22px;
+--lineHeight-m: calc(var(--unit) * 4);
+
+--fontSize-l: 36px;
+--lineHeight-l: calc(var(--unit) * 5);
+
+--fontSize-xl: 44px;
+--lineHeight-xl: calc(var(--unit) * 6);
+
+--fontWeight-400: 400;
+--fontWeight-700: 700;
+
+--colorLightnessIncrement: 10%;
+
+--c-primary-hue: 215;
+--c-primary-saturation: 46%;
+--c-primary-lightness: 50%;
+
+--c-primary: hsl(var(--c-primary-hue), var(--c-primary-saturation), var(--c-primary-lightness));
+
+--c-primary-2xlight: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) + var(--colorLightnessIncrement) * 3));
+--c-primary-xlight: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) + var(--colorLightnessIncrement) * 2));
+--c-primary-light: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) + var(--colorLightnessIncrement)));
+
+--c-primary-dark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--colorLightnessIncrement)));
+--c-primary-xdark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--colorLightnessIncrement) * 2));
+--c-primary-2xdark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--colorLightnessIncrement) * 3));
+
+--greyHue: 0;
+--greySaturation: 0%;
+
+--initialGreyLightness: 93%;
+--greyscaleLightnessIncrement: 11%;
+
+--c-grey-1: hsl(var(--greyHue), var(--greySaturation), var(--initialGreyLightness));
+--c-grey-2: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 1));
+--c-grey-3: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 2));
+--c-grey-4: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 3));
+--c-grey-5: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 4));
+--c-grey-6: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 5));
+--c-grey-7: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 6));
+--c-grey-8: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 7));
+</code></pre>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <script>
+      const body = document.querySelector('body')
+
+      const setThemeMetaTagColor = (color) => {
+        document.getElementById('themeMetaTag').setAttribute('content', color)
+      }
+
+      if(body.classList[0] === 'theme-dark') {
+        setThemeMetaTagColor('#171717')
+      } else {
+        setThemeMetaTagColor('white')
+      }
+
+      const toggleTheme = () => {
+        if(body.classList[0] === 'theme-dark') {
+          body.classList.remove('theme-dark')
+          setThemeMetaTagColor('white')
+        } else {
+          body.classList.add('theme-dark')
+          setThemeMetaTagColor('#171717')
+        }
+      }
+    </script>
+
+    <footer class="distribute distribute--orientation-horizontal distribute--gap-l distribute--alignment-center c-grey-6 textSize-xs">
+      <div>
+        made by <a class="c-grey-6" target="_blank" href="https://hihayk.com">Hayk</a>
+      </div>
+
+      <div>
+        <a class="c-grey-6" target="_blank" href="https://github.com/hihayk/poco">Github</a>
+      </div>
+
+      <div class="githubButtonWrapper">
+        <a target="_blank" class="github-button" href="https://github.com/hihayk/poco" data-icon="octicon-star" data-show-count="true" aria-label="Star hihayk/poco on GitHub">Star</a>
+      </div>
+    </footer>
+
+  </body>
+</html>
