@@ -1,0 +1,69 @@
+:root {
+  --unit: 8px;
+  --fontFamily: -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --spaceIncrement: 2;
+
+  --space-s: var(--unit);
+  --space-m: calc(var(--unit) * var(--spaceIncrement));
+  --space-l: calc(var(--space-m) * var(--spaceIncrement));
+  --space-xl: calc(var(--space-l) * var(--spaceIncrement));
+  --space-2xl: calc(var(--space-xl) * var(--spaceIncrement));
+  --space-3xl: calc(var(--space-2xl) * var(--spaceIncrement));
+  --space-4xl: calc(var(--space-3xl) * var(--spaceIncrement));
+  --space-5xl: calc(var(--space-4xl) * var(--spaceIncrement));
+
+  --spaceframe-s: var(--space-s);
+  --spaceframe-m: var(--space-m);
+  --spaceframe-l: var(--space-l);
+  --spaceframe-xl: var(--space-xl);
+
+  --fontSize-xs: 12px;
+  --lineHeight-xs: calc(var(--unit) * 2);
+
+  --fontSize-s: 16px;
+  --lineHeight-s: calc(var(--unit) * 3);
+
+  --fontSize-m: 22px;
+  --lineHeight-m: calc(var(--unit) * 4);
+
+  --fontSize-l: 36px;
+  --lineHeight-l: calc(var(--unit) * 5);
+
+  --fontSize-xl: 44px;
+  --lineHeight-xl: calc(var(--unit) * 6);
+
+  --fontWeight-400: 400;
+  --fontWeight-700: 700;
+
+  --colorLightnessIncrement: 10%;
+
+  --c-primary-hue: 215;
+  --c-primary-saturation: 46%;
+  --c-primary-lightness: 50%;
+
+  --c-primary: hsl(var(--c-primary-hue), var(--c-primary-saturation), var(--c-primary-lightness));
+
+  --c-primary-2xlight: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) + var(--colorLightnessIncrement) * 3));
+  --c-primary-xlight: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) + var(--colorLightnessIncrement) * 2));
+  --c-primary-light: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) + var(--colorLightnessIncrement)));
+
+  --c-primary-dark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--colorLightnessIncrement)));
+  --c-primary-xdark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--colorLightnessIncrement) * 2));
+  --c-primary-2xdark: hsl(var(--c-primary-hue), var(--c-primary-saturation), calc(var(--c-primary-lightness) - var(--colorLightnessIncrement) * 3));
+
+  --greyHue: 0;
+  --greySaturation: 0%;
+
+  --initialGreyLightness: 93%;
+  --greyscaleLightnessIncrement: 11%;
+
+  --c-grey-1: hsl(var(--greyHue), var(--greySaturation), var(--initialGreyLightness));
+  --c-grey-2: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 1));
+  --c-grey-3: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 2));
+  --c-grey-4: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 3));
+  --c-grey-5: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 4));
+  --c-grey-6: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 5));
+  --c-grey-7: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 6));
+  --c-grey-8: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 7));
+}
