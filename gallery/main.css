@@ -16,11 +16,21 @@
   --projectsColumnsAmount: 2;
 
   --bodyPadding: var(--space-xl);
+
+  --projectContainerPadding: var(--space-l);
 }
 
 @media (max-width: 720px) {
   :root {
     --projectsColumnsAmount: 1;
+    --bodyPadding: 0;
+    --projectBG: var(--c-grey-1);
+  }
+}
+
+@media (min-width: 720px) {
+  :root {
+    --projectOnHoverBG: var(--c-grey-1);
     --bodyPadding: 0;
   }
 } 
@@ -59,13 +69,17 @@ img {
 }
 
 .projectContainer {
-  padding: var(--space-l) var(--space-l);
+  padding: var(--projectContainerPadding);
   transition: background-color .3s;
   border-radius: 8px;
 }
 
+.projectContainer:nth-child(2n+1) {
+  background-color: var(--projectBG);
+}
+
 .projectContainer:hover {
-  background-color: var(--c-grey-1);
+  background-color: var(--projectOnHoverBG);
   transition: background-color .1s;
 }
 
