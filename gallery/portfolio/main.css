@@ -4,7 +4,8 @@
 }
 
 *, *:before, *:after {
-  box-sizing: border-box;
+	box-sizing: border-box;
+	line-height: var(--globalLineHeight);
 }
 
 body {
@@ -12,7 +13,6 @@ body {
 	padding: var(--bodyPadding);
 	font-family: var(--fontFamily);
 	font-size: var(--fontSize-s);
-	line-height: var(--lineHeight-s);
 	color: var(--c-grey-6);
 
 	--fontFamily: 'Helvetica neue', sans-serif;

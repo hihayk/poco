@@ -40,40 +40,35 @@
         <h4 class="subsectionTitle">Type scale</h4>
 
         <div class="demoSection">
-          <div class="textSize-xs">Ag · 12px/16px</div>
-          <div class="textSize-s">Ag · 16px/24px</div>
-          <div class="textSize-m">Ag · 22px/32px</div>
-          <div class="textSize-l">Ag · 36px/40px</div>
-          <div class="textSize-xl">Ag · 44px/48px</div>
+          <div class="textSize-xl lineLengthLimit">Subharmonicon is a semi-modular polyrhythmic analog synthesizer designed for the exploration of sequences that unfold and evolve over time, spiraling through 6-tone subharmonic chords and organic polyrhythms.</div>
+          <br />
+          <div class="textSize-l lineLengthLimit">Subharmonicon is a semi-modular polyrhythmic analog synthesizer designed for the exploration of sequences that unfold and evolve over time, spiraling through 6-tone subharmonic chords and organic polyrhythms.</div>
+          <br />
+          <div class="textSize-m lineLengthLimit">Subharmonicon is a semi-modular polyrhythmic analog synthesizer designed for the exploration of sequences that unfold and evolve over time, spiraling through 6-tone subharmonic chords and organic polyrhythms.</div>
+          <br />
+          <div class="textSize-s lineLengthLimit">Subharmonicon is a semi-modular polyrhythmic analog synthesizer designed for the exploration of sequences that unfold and evolve over time, spiraling through 6-tone subharmonic chords and organic polyrhythms.</div>
+          <br />
+          <div class="textSize-xs lineLengthLimit">Subharmonicon is a semi-modular polyrhythmic analog synthesizer designed for the exploration of sequences that unfold and evolve over time, spiraling through 6-tone subharmonic chords and organic polyrhythms.</div>
         </div>
 
         <div class="codeSection">
           <div class="codeContainer">
             <div class="codeContainerTitle">Variables</div>
-<pre><code>--fontSize-xs
---lineHeight-xs
-
---fontSize-s
---lineHeight-s
-
---fontSize-m
---lineHeight-m
-
+<pre><code>--fontSize-xl
 --fontSize-l
---lineHeight-l
-
---fontSize-xl
---lineHeight-xl
+--fontSize-m
+--fontSize-s
+--fontSize-xs
 </code></pre>
           </div>
 
           <div class="codeContainer">
             <div class="codeContainerTitle">Utility classes</div>
-<pre><code>.textSize-xs
-.textSize-s
-.textSize-m
+<pre><code>.textSize-xl
 .textSize-l
-.textSize-xl
+.textSize-m
+.textSize-s
+.textSize-xs
 </code></pre>
           </div>
         </div>
@@ -105,6 +100,42 @@
         </div>
       
       </div>
+
+      <div class="docsSubsection">
+        <h4 class="subsectionTitle">Line height</h4>
+
+        <p class="subsectionDescription">
+          Apply the global line height variable to all elements with the <code class="inline">*</code> selector: <code class="inline">* {line-height: var(--globalLineHeight)}</code>
+        </p>
+
+        <div class="codeSection codeSection--columns-1">
+          <div class="codeContainer">
+            <div class="codeContainerTitle">Variables</div>
+<pre><code>--globalLineHeight</code></pre>
+          </div>
+        </div>
+      
+      </div>
+      
+      <div class="docsSubsection">
+        <h4 class="subsectionTitle">Line length limit</h4>
+
+        <p class="subsectionDescription">
+          Limit the line length of a paragraph to improve legibility.
+        </p>
+
+        <div class="codeSection">
+          <div class="codeContainer">
+            <div class="codeContainerTitle">Variables</div>
+<pre><code>--lineLengthLimit</code></pre>
+          </div>
+          <div class="codeContainer">
+            <div class="codeContainerTitle">Utility classes</div>
+<pre><code>.lineLengthLimit</code></pre>
+          </div>
+        </div>
+      
+      </div>
     </section>
 
     <section class="docsSection">
@@ -114,7 +145,7 @@
         <p class="subsectionDescription">
           Use spaces to define any apacing, widths and heights.
           <br>
-          Spaces use x2 increment, each space is twice as big as the previous one to make sure there is a consistent contrast between.
+          Spaces use x2 increment, each space is twice as big as the previous one to make sure there is a consistent contrast in-between.
         </p>
 
         <div class="demoSection">
@@ -144,11 +175,11 @@
 
           <div class="codeContainer">
             <div class="codeContainerTitle">Utility classes</div>
-<pre><code>.width- s | m | l | xl | 2xl | 3xl | 4xl | 5xl
+<pre><code>.width-    s | m | l | xl | 2xl | 3xl | 4xl | 5xl
 .minWidth- s | m | l | xl | 2xl | 3xl | 4xl | 5xl
 .maxWidth- s | m | l | xl | 2xl | 3xl | 4xl | 5xl
 
-.heght- s | m | l | xl | 2xl | 3xl | 4xl | 5xl
+.heght-    s | m | l | xl | 2xl | 3xl | 4xl | 5xl
 .minHeght- s | m | l | xl | 2xl | 3xl | 4xl | 5xl
 .maxHeght- s | m | l | xl | 2xl | 3xl | 4xl | 5xl
 </code></pre>
@@ -478,7 +509,7 @@
         <div class="codeSection codeSection--columns-1">
           <div class="codeContainer">
             <div class="codeContainerTitle">All variables</div>
-<pre><code>--unit: 8px;
+<pre><code>--unit: 0.5rem;
 --fontFamily: -apple-system, BlinkMacSystemFont, sans-serif;
 
 --spaceIncrement: 2;
@@ -497,23 +528,20 @@
 --spaceframe-l: var(--space-l);
 --spaceframe-xl: var(--space-xl);
 
---fontSize-xs: 12px;
---lineHeight-xs: calc(var(--unit) * 2);
+--fontSizeIncrement: 1.4;
+--baseFontSize: 1rem;
+--globalLineHeight: calc(0.3rem + 1em);
 
---fontSize-s: 16px;
---lineHeight-s: calc(var(--unit) * 3);
-
---fontSize-m: 22px;
---lineHeight-m: calc(var(--unit) * 4);
-
---fontSize-l: 36px;
---lineHeight-l: calc(var(--unit) * 5);
-
---fontSize-xl: 44px;
---lineHeight-xl: calc(var(--unit) * 6);
+--fontSize-xs: calc(var(--baseFontSize) / var(--fontSizeIncrement));
+--fontSize-s: var(--baseFontSize);
+--fontSize-m: calc(var(--fontSize-s) * var(--fontSizeIncrement));
+--fontSize-l: calc(var(--fontSize-m) * var(--fontSizeIncrement));
+--fontSize-xl: calc(var(--fontSize-l) * var(--fontSizeIncrement));
 
 --fontWeight-400: 400;
 --fontWeight-700: 700;
+
+--lineLengthLimit: 30em;
 
 --colorLightnessIncrement: 10%;
 

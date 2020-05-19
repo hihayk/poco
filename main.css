@@ -14,6 +14,7 @@
 
 *, *:before, *:after {
   box-sizing: border-box;
+  line-height: var(--globalLineHeight);
 }
 
 body {
@@ -21,7 +22,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--fontFamily);
   font-size: var(--fontSize-s);
-  line-height: var(--lineHeight-s);
   margin: unset;
   padding: var(--space-xl);
   background-color: var(--c-background);
@@ -104,10 +104,14 @@ a {
 code {
   background-color: var(--c-grey-1);
   color: var(--c-grey-5);
-  padding: var(--spaceframe-l);
-  display: block;
+  padding: 0.25em 0.5em;
   font-family: "SFMono-Regular", monospace;
   overflow: auto;
+}
+
+code:not(.inline) {
+  display: block;
+  padding: var(--spaceframe-l);
 }
 
 pre {

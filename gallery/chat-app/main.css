@@ -21,7 +21,8 @@
 
 * {
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: var(--globalLineHeight);
 }
 
 *, *:before, *:after {
@@ -33,7 +34,6 @@ body {
 	margin: 0;
 	font-family: var(--fontFamily);
 	font-size: var(--fontSize-s);
-	line-height: var(--lineHeight-s);
 	color: var(--c-grey-6);
 	font-family: 'Arimo', sans-serif;
 }
@@ -99,7 +99,6 @@ img {
 	display: block;
 	flex-shrink: 0;
 	font-size: var(--fontSize-xs);
-	line-height: var(--lineHeight-xs);
 	position: absolute;
 	right: var(--space-m);
 	display: flex;
@@ -128,7 +127,6 @@ img {
 .messagePreview {
 	font-family: var(--fontFamily);
 	font-size: var(--fontSize-xs);
-	line-height: var(--lineHeight-xs);
 	color: var(--c-grey-4);
 	white-space: nowrap; 
   overflow: hidden;
@@ -164,7 +162,7 @@ img {
 .messageBox {
 	--minHeight: calc(var(--unit) * 6);
 	--lineHeight: var(--lineHeight-s);
-	--verticalPadding: calc((var(--minHeight) - var(--lineHeight)) / 2);
+	--verticalPadding: calc((var(--minHeight) - var(--globalLineHeight)) / 2);
 
 	background-color: white;
 	padding: var(--verticalPadding) var(--space-m);
@@ -215,7 +213,6 @@ img {
 	color: inherit;
 	background-color: transparent;
 	font-size: var(--fontSize-s);
-	line-height: var(--lineHeight-s);
 	padding: 0;
 	height: calc(var(--unit) * 5);
 	caret-color: var(--c-primary);

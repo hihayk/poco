@@ -8,7 +8,8 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  outline-color: var(--c-primary);
+	outline-color: var(--c-primary);
+	line-height: var(--globalLineHeight);
 }
 
 body {
@@ -16,7 +17,6 @@ body {
 	margin: 0;
 	font-family: var(--fontFamily);
 	font-size: var(--fontSize-s);
-	line-height: var(--lineHeight-s);
 	color: var(--c-primary-dark);
 }
 
@@ -54,7 +54,6 @@ img {
 
 .mainTitle {
 	font-size: var(--fontSize-l);
-	line-height: var(--lineHeight-l);
 	font-family: 'Merriweather', serif;
 	color: var(--c-primary-dark);
 }
@@ -71,7 +70,6 @@ img {
 	border-radius: 4px;
 	text-transform: uppercase;
 	font-size: var(--fontSize-xs);
-	line-height: var(--lineHeight-xs);
 	letter-spacing: 0.1em;
 	font-weight: 600;
 	transition: 0.2s;
@@ -175,7 +173,6 @@ img {
 	color: var(--c-primary-2xlight);
 	font-weight: 700;
 	font-size: var(--fontSize-xl);
-	line-height: var(--lineHeight-xl);
 	font-family: 'Merriweather', serif;
 }
 
@@ -183,6 +180,5 @@ img {
 	margin-bottom: var(--space-s);
 	color: var(--c-primary);
 	font-size: var(--fontSize-m);
-	line-height: var(--lineHeight-m);
 	font-family: 'Merriweather', serif;
 }

@@ -4,13 +4,16 @@
   --c-primary-lightness: 50%;
 }
 
+* {
+	line-height: var(--globalLineHeight);
+}
+
 body {
 	background-color: var(--c-grey-1);
 	margin: 0;
 	padding: var(--space-xl);
 	font-family: var(--fontFamily);
 	font-size: var(--fontSize-s);
-	line-height: var(--lineHeight-s);
 	color: var(--c-grey-6);
 
 	--fontFamily: 'Helvetica neue', sans-serif;
@@ -33,7 +36,6 @@ img {
 
 .articleTitle {
 	font-size: var(--fontSize-xl);
-	line-height: var(--lineHeight-xl);
 	font-weight: var(--fontWeight-700);
 	margin-bottom: var(--space-m);
 	letter-spacing: -0.03em;
@@ -42,7 +44,6 @@ img {
 
 .articleSubtitle {
 	font-size: var(--fontSize-l);
-	line-height: var(--lineHeight-l);
 	font-weight: var(--fontWeight-700);
 	margin-bottom: var(--space-m);
 	letter-spacing: -0.02em;
@@ -51,7 +52,6 @@ img {
 
 .sectionTitle {
 	font-size: var(--fontSize-m);
-	line-height: var(--lineHeight-m);
 	font-weight: var(--fontWeight-700);
 	letter-spacing: -0.02em;
 	color: var(--c-grey-8);

@@ -77,16 +77,33 @@
 .spaceframe-l {padding: var(--spaceframe-l)}
 .spaceframe-xl {padding: var(--spaceframe-xl)}
 
-.textSize-xs {font-size: var(--fontSize-xs)}
-.textSize-s {font-size: var(--fontSize-s)}
-.textSize-m {font-size: var(--fontSize-m)}
-.textSize-l {font-size: var(--fontSize-l)}
-.textSize-xl {font-size: var(--fontSize-xl)}
+.textSize-xs {
+  font-size: var(--fontSize-xs);
+  line-height: var(--lineHeight-xs);
+}
+
+.textSize-s {
+  font-size: var(--fontSize-s);
+  line-height: var(--lineHeight-s);
+}
+
+.textSize-m {
+  font-size: var(--fontSize-m);
+  line-height: var(--lineHeight-m);
+}
+
+.textSize-l {
+  font-size: var(--fontSize-l);
+  line-height: var(--lineHeight-l);
+}
+
+.textSize-xl {
+  font-size: var(--fontSize-xl);
+  line-height: var(--lineHeight-xl);
+}
 
 .fontWeight-400 {font-weight: var(--fontWeight-400)}
 .fontWeight-700 {font-weight: var(--fontWeight-700)}
-
-.lineLengthLimit {max-width: var(--lineLengthLimit)}
 
 .c-primary-2xlight {color: var(--c-primary-2xlight)}
 .c-primary-xlight {color: var(--c-primary-xlight)}

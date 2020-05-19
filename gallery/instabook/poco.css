@@ -1,5 +1,5 @@
 :root {
-  --unit: 0.5rem;
+  --unit: 8px;
   --fontFamily: -apple-system, BlinkMacSystemFont, sans-serif;
 
   --spaceIncrement: 2;
@@ -18,20 +18,23 @@
   --spaceframe-l: var(--space-l);
   --spaceframe-xl: var(--space-xl);
 
-  --fontSizeIncrement: 1.4;
-  --baseFontSize: 1rem;
-  --globalLineHeight: calc(0.3rem + 1em);
-  
-  --fontSize-xs: calc(var(--baseFontSize) / var(--fontSizeIncrement));
-  --fontSize-s: var(--baseFontSize);
-  --fontSize-m: calc(var(--fontSize-s) * var(--fontSizeIncrement));
-  --fontSize-l: calc(var(--fontSize-m) * var(--fontSizeIncrement));
-  --fontSize-xl: calc(var(--fontSize-l) * var(--fontSizeIncrement));
+  --fontSize-xs: 12px;
+  --lineHeight-xs: calc(var(--unit) * 2);
+
+  --fontSize-s: 16px;
+  --lineHeight-s: calc(var(--unit) * 3);
+
+  --fontSize-m: 22px;
+  --lineHeight-m: calc(var(--unit) * 4);
+
+  --fontSize-l: 36px;
+  --lineHeight-l: calc(var(--unit) * 5);
+
+  --fontSize-xl: 44px;
+  --lineHeight-xl: calc(var(--unit) * 6);
 
   --fontWeight-400: 400;
   --fontWeight-700: 700;
-
-  --lineLengthLimit: 30em;
 
   --colorLightnessIncrement: 10%;
 
